@@ -1,0 +1,69 @@
+$bg: rgb(35,34,41);
+
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+
+// Pure CSS
+@import 'node_modules/purecss/build/pure';
+@import 'node_modules/purecss/build/grids-responsive';
+
+// Import Modules
+@import '../_modules/link/link';
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    min-height: 100%;
+    color: white;
+    background-color: $bg;
+    // background: url("../images/portrait-bg.jpg");
+    background-size: cover;
+    background-position: center top;
+    &__content {
+        @extend .pure-g;
+        min-height: 100%;
+        max-width: 1190px;
+        padding: 0 1em;
+        margin: 0 auto;
+        &__bio {
+            @extend .pure-u-1;
+            @extend .pure-u-md-1-2;
+            padding-top: 10em;
+            &__name {
+                @extend .pure-u-1;
+                font-weight: 600;
+            }
+            &__desc {
+                @extend .pure-u-1;
+                font-weight: 200;
+            }
+            &__divider {
+                margin-bottom: 20px;
+                border-color: lighten($bg, 10%);
+            }
+            &__links {
+                @extend .pure-u-1;
+                &__link {
+                    margin-right: 10px;
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
