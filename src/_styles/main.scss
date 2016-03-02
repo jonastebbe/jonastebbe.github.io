@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400|Raleway:200);
 // Variables
 $bg: rgb(35,34,41);
+$grayish: #CACED2;
 $font-stack-heading: "Montserrat", "Helvetica", sans-serif;
 $font-stack-body: "Raleway", "Helvetica", sans-serif;
 
@@ -50,8 +51,14 @@ body {
             font-family: $font-stack-body !important;
             &__name {
                 @extend .pure-u-1;
-                font-weight: 600;
-                font-family: $font-stack-heading !important;
+                font-size: 2.5em;
+                h1 {
+                    color: $grayish;
+                    font-weight: 600;
+                    font-family: $font-stack-heading !important;
+                    margin-bottom: 0.1em;
+                    line-height: 0.8;
+                }
             }
             &__desc {
                 @extend .pure-u-1;
@@ -69,9 +76,10 @@ body {
                 @extend .pure-u-1;
                 &__intro {
                     font-family: $font-stack-body !important;
-                    margin-right: 10px;
-                    opacity: 0.2;
-                    font-weight: 100;
+                    text-transform: uppercase;
+                    margin-right: 1em;
+                    opacity: 0.5;
+                    color: $grayish;
                 }
                 &__link {
                     font-family: $font-stack-body !important;
@@ -89,9 +97,10 @@ body {
                 @extend .pure-u-1;
                 &__intro {
                     font-family: $font-stack-body !important;
-                    margin-right: 10px;
-                    opacity: 0.2;
-                    font-weight: 100;
+                    text-transform: uppercase;
+                    margin-right: 1em;
+                    opacity: 0.5;
+                    color: $grayish;
                 }
                 &__tag {
                     @extend .pure-button;
