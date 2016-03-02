@@ -2677,8 +2677,15 @@ body {
 }
 
 .main__content__bio__name {
+  font-size: 2.5em;
+}
+
+.main__content__bio__name h1 {
+  color: #CACED2;
   font-weight: 600;
   font-family: "Montserrat", "Helvetica", sans-serif !important;
+  margin-bottom: 0.1em;
+  line-height: 0.8;
 }
 
 .main__content__bio__desc {
@@ -2696,9 +2703,10 @@ body {
 
 .main__content__bio__links__intro {
   font-family: "Raleway", "Helvetica", sans-serif !important;
-  margin-right: 10px;
-  opacity: 0.2;
-  font-weight: 100;
+  text-transform: uppercase;
+  margin-right: 1em;
+  opacity: 0.5;
+  color: #CACED2;
 }
 
 .main__content__bio__links__link {
@@ -2719,9 +2727,10 @@ body {
 
 .main__content__bio__meta__intro {
   font-family: "Raleway", "Helvetica", sans-serif !important;
-  margin-right: 10px;
-  opacity: 0.2;
-  font-weight: 100;
+  text-transform: uppercase;
+  margin-right: 1em;
+  opacity: 0.5;
+  color: #CACED2;
 }
 
 .main__content__bio__meta__tag {
