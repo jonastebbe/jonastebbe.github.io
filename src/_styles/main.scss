@@ -40,6 +40,12 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: calc(100% - 20px);
+  }
+}
 @media (min-width: 768px) {
   .wrapper {
     width: 740px;
@@ -217,14 +223,51 @@ body {
             }
             &:nth-child(odd) {
                 padding-bottom: 2.5px;
+                @media screen and (max-width: 35.5em) {
+                    padding: 5px 5px 0px 0px;
+                }
             }
             &:nth-child(even) {
                 padding-top: 2.5px;
+                @media screen and (max-width: 35.5em) {
+                    padding: 5px 0px 0px 5px;
+                }
             }
             @media screen and (max-width: 35.5em) {
-                width: 50%;
+                width: calc((100% - 10px) / 2);
                 float: left;
-                padding: 0px !important;
+            }
+        }
+    }
+    &__half-teaser {
+        @extend .pure-g;
+        &__wrapper {
+            @extend .pure-u-1-2;
+            img {
+                padding-top: 20px;
+                width: calc(100% - 10px);
+            }
+            &:nth-child(odd) {
+                img {
+                    padding-right: 10px;
+                    @media screen and (max-width: 35.5em) {
+                        padding-right: 5px;
+                    }
+                }
+            }
+            &:nth-child(even) {
+                img {
+                    padding-left: 10px;
+                    @media screen and (max-width: 35.5em) {
+                        padding-left: 5px;
+                    }
+                }
+            }
+            @media screen and (max-width: 35.5em) {
+                img {
+                    padding-top: 10px;
+                    width: calc(100% - 5px);
+                }
             }
         }
     }
