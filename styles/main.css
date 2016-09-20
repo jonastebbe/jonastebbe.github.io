@@ -926,7 +926,7 @@ th {
 }
 
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g, .header, .footer, .section, .photo-grid {
+.pure-g, .header, .footer, .section, .photo-grid, .album-grid {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -978,7 +978,8 @@ th {
 .header,
 .footer,
 .section,
-.photo-grid {
+.photo-grid,
+.album-grid {
   word-spacing: -0.43em;
 }
 
@@ -997,7 +998,7 @@ th {
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"] {
   font-family: sans-serif;
 }
 
@@ -1007,6 +1008,9 @@ this the same font stack that Normalize.css sets for the `body`.
 .header__links,
 .footer__logo,
 .footer__links,
+.album-grid__header,
+.album-grid__teaser,
+.album-grid__small-teaser,
 .pure-u-1-2,
 .photo-grid__photo,
 .pure-u-1-3,
@@ -1219,6 +1223,9 @@ this the same font stack that Normalize.css sets for the `body`.
 .header__links,
 .footer__logo,
 .footer__links,
+.album-grid__header,
+.album-grid__teaser,
+.album-grid__small-teaser,
 .pure-u-5-5,
 .pure-u-24-24 {
   width: 100%;
@@ -2171,7 +2178,9 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .footer__links,
   .photo-grid__photo,
   .pure-u-md-1-3,
+  .album-grid__small-teaser,
   .pure-u-md-2-3,
+  .album-grid__teaser,
   .pure-u-md-1-4,
   .pure-u-md-3-4,
   .pure-u-md-1-5,
@@ -2261,7 +2270,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 29.1667%;
     *width: 29.1357%;
   }
-  .pure-u-md-1-3,
+  .pure-u-md-1-3, .album-grid__small-teaser,
   .pure-u-md-8-24 {
     width: 33.3333%;
     *width: 33.3023%;
@@ -2307,7 +2316,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 62.5000%;
     *width: 62.4690%;
   }
-  .pure-u-md-2-3,
+  .pure-u-md-2-3, .album-grid__teaser,
   .pure-u-md-16-24 {
     width: 66.6667%;
     *width: 66.6357%;
@@ -2744,49 +2753,15 @@ a:active {
   color: #000000;
 }
 
-html, body, button, input, select, textarea,
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"] {
-  font-family: "Avenir Next", "Helvetica", sans-serif !important;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .wrapper {
-    width: 740px;
-  }
-}
-
-@media (min-width: 992px) {
-  .wrapper {
-    width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .wrapper {
-    width: 1170px;
-  }
-}
-
 .header {
   margin-top: 50px;
 }
 
-.header__logo h1 {
+.header__logo a {
+  text-decoration: none;
+}
+
+.header__logo a h1 {
   font-family: "Avenir Next", "Helvetica", sans-serif;
   font-weight: 700;
   letter-spacing: 0.3em;
@@ -2794,7 +2769,7 @@ body {
 }
 
 @media screen and (max-width: 35.5em) {
-  .header__logo {
+  .header__logo a {
     text-align: center;
   }
 }
@@ -2852,6 +2827,44 @@ body {
   .footer__links {
     text-align: center;
     margin-top: 20px;
+  }
+}
+
+html, body, button, input, select, textarea,
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"] {
+  font-family: "Avenir Next", "Helvetica", sans-serif !important;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 740px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1170px;
   }
 }
 
@@ -2948,6 +2961,97 @@ body {
 
 .photo-grid__photo:nth-child(even) > .photo-grid__photo__wrapper {
   padding-left: 10px;
+}
+
+.more-link {
+  text-align: center;
+  padding: 25px;
+}
+
+.more-link a {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  border: 3px solid black;
+}
+
+@media screen and (max-width: 35.5em) {
+  .more-link a {
+    padding: 20px;
+  }
+}
+
+.album-grid {
+  margin-bottom: 50px;
+}
+
+.album-grid__header {
+  margin-top: 50px;
+}
+
+.album-grid__header h1 {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  display: inline-block;
+}
+
+.album-grid__header h2 {
+  color: #7C7A7A;
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  margin: 0;
+  letter-spacing: normal;
+  display: inline-block;
+}
+
+.album-grid__teaser__wrapper {
+  padding-right: 10px;
+}
+
+.album-grid__teaser__wrapper img {
+  width: 100%;
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__teaser__wrapper {
+    padding-right: 0px;
+  }
+}
+
+.album-grid__small-teaser__wrapper {
+  padding-left: 10px;
+}
+
+.album-grid__small-teaser__wrapper img {
+  width: 100%;
+}
+
+.album-grid__small-teaser__wrapper:nth-child(odd) {
+  padding-bottom: 2.5px;
+}
+
+.album-grid__small-teaser__wrapper:nth-child(even) {
+  padding-top: 2.5px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__small-teaser__wrapper {
+    width: 50%;
+    float: left;
+    padding: 0px !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
