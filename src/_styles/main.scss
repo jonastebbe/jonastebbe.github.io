@@ -1,10 +1,10 @@
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400|Raleway:200);
 // Variables
-$bg: rgb(35,34,41);
-$grayish: #CACED2;
-$font-stack-heading: "Montserrat", "Helvetica", sans-serif;
-$font-stack-body: "Raleway", "Helvetica", sans-serif;
+$text-color: black;
+$primary: #F1FAEE;
+$gray: #7C7A7A;
+
+$font-stack-heading: "Avenir Next", "Helvetica", sans-serif;
+$font-stack-body: "Avenir Next", "Helvetica", sans-serif;
 
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
@@ -16,7 +16,7 @@ $font-stack-body: "Raleway", "Helvetica", sans-serif;
 // Import Modules
 @import '../_modules/link/link';
 
-html, button, input, select, textarea,
+html, body, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     font-family: $font-stack-body !important;
 }
@@ -31,92 +31,184 @@ body {
     width: 100%;
 }
 
-.main {
-    min-height: 100%;
-    color: white;
-    background-color: $bg;
-    background: url("../images/portrait-bg.jpg");
-    background-size: cover;
-    background-position: center top;
-    &__content {
-        @extend .pure-g;
-        min-height: 100%;
-        max-width: 1190px;
-        padding: 0 1em;
-        margin: 0 auto;
-        &__bio {
-            @extend .pure-u-1;
-            @extend .pure-u-md-1-2;
-            padding-top: 10em;
-            font-family: $font-stack-body !important;
-            &__name {
-                @extend .pure-u-1;
-                font-size: 2.5em;
-                h1 {
-                    color: $grayish;
-                    font-weight: 600;
-                    font-family: $font-stack-heading !important;
-                    margin-bottom: 0.1em;
-                    line-height: 0.8;
-                }
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1170px;
+  }
+}
+
+.header {
+    @extend .pure-g;
+    margin-top: 50px;
+    &__logo {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-5;
+        h1 {
+            font-family: $font-stack-heading;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin: 0;
+        }
+        @media screen and (max-width: 35.5em) {
+            text-align: center;
+        }
+    }
+    &__links {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-4-5;
+        text-align: right;
+        &::before {
+           content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            text-align: right;
+        }
+        @media screen and (max-width: 35.5em) {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    @extend .pure-g;
+    margin: 50px 0;
+    &__logo {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-2;
+        h4 {
+            color: $gray;
+            font-family: $font-stack-heading;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin: 0;
+        }
+        @media screen and (max-width: 35.5em) {
+            text-align: center;
+        }
+    }
+    &__links {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-2;
+        text-align: right;
+        &::before {
+           content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            text-align: right;
+        }
+        @media screen and (max-width: 35.5em) {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
+
+.section {
+    @extend .pure-g;
+    &__label {
+        @extend .pure-u-1-12;
+        @extend .pure-u-md-1-12;
+        position: relative;
+        p {
+            font-family: $font-stack-heading;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            &::before {
+                background-color: $text-color;
+                content: '';
+                display: inline-block;
+                height: 0.2em;
+                position: relative;
+                vertical-align: middle;
+                width: 50px;
+                margin-right: 10px;
             }
-            &__desc {
-                @extend .pure-u-1;
-                font-family: $font-stack-body !important;
-                font-weight: 200;
-                line-height: 1.7;
-            }
-            &__divider {
-                margin: 20px 0;
-                opacity: 0.2;
-                border-width: 1px;
-                border-color: white;
-            }
-            &__links {
-                @extend .pure-u-1;
-                &__intro {
-                    font-family: $font-stack-body !important;
-                    text-transform: uppercase;
-                    margin-right: 1em;
-                    opacity: 0.5;
-                    color: $grayish;
-                }
-                &__link {
-                    font-family: $font-stack-body !important;
-                    margin-right: 15px;
-                    img {
-                        height: 1em;
-                        transition: transform 300ms ease;
-                        &:hover, &:focus {
-                            transform: scale(1.4);
-                        }
-                    }
-                }
-            }
-            &__meta {
-                @extend .pure-u-1;
-                &__intro {
-                    font-family: $font-stack-body !important;
-                    text-transform: uppercase;
-                    margin-right: 1em;
-                    opacity: 0.5;
-                    color: $grayish;
-                }
-                &__tag {
-                    @extend .pure-button;
-                    font-family: $font-stack-heading !important;
-                    transition: background-color 200ms ease;
-                    font-size: 50%;
-                    background-color: lighten($bg, 40%);
-                    color: $bg !important;
-                    padding: 5px 10px;
-                    border-radius: 20px;
-                    margin-right: 10px;
-                    &:hover, &:focus {
-                        background-color: lighten($bg, 70%);
-                    }
+            @media screen and (max-width: 35.5em) {
+                font-size: 10px;
+                &::before {
+                    height: 0.15em;
+                    width: 35px;
                 }
             }
         }
+    }
+    &__content {
+        @extend .pure-u-5-6;
+        @extend .pure-u-md-5-6;
+        p {
+            font-family: $font-stack-heading;
+            font-size: 35px;
+            line-height: 1.5;
+            font-weight: 700;
+            letter-spacing: normal;
+            padding: 50px;
+            background-color: $primary;
+            @media screen and (max-width: 35.5em) {
+                font-size: 14px;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.social-icon {
+    font-family: $font-stack-body !important;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    &:last-of-type {
+        margin-right: 0px;
+    }
+    img {
+        height: 15px;
+        transition: transform 300ms ease;
+        &:hover, &:focus {
+            transform: scale(1.4);
+        }
+    }
+}
+
+.photo-grid {
+    @extend .pure-g;
+    &__photo {
+        @extend .pure-u-1-2;
+        @extend .pure-u-md-1-2;
+        &__wrapper {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__photo:nth-child(odd) > .photo-grid__photo__wrapper {
+        padding-right: 10px;
+    }
+    &__photo:nth-child(even) > .photo-grid__photo__wrapper {
+        padding-left: 10px;
     }
 }
