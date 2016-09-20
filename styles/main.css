@@ -265,7 +265,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -671,7 +672,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -868,7 +870,6 @@ th {
   -ms-flex-flow: row wrap;
   /* Prevents distributing space between rows */
   -ms-align-content: flex-start;
-  -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
 }
@@ -878,7 +879,8 @@ th {
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.pure-g, .main__content {
+.pure-g,
+.main__content {
   word-spacing: -0.43em;
 }
 
@@ -901,12 +903,7 @@ this the same font stack that Normalize.css sets for the `body`.
   font-family: sans-serif;
 }
 
-.pure-u-1,
-.main__content__bio,
-.main__content__bio__name,
-.main__content__bio__desc,
-.main__content__bio__links,
-.main__content__bio__meta,
+.pure-u-1, .main__content__bio, .main__content__bio__name, .main__content__bio__desc, .main__content__bio__links, .main__content__bio__meta,
 .pure-u-1-1,
 .pure-u-1-2,
 .pure-u-1-3,
@@ -1111,12 +1108,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 95.8023%;
 }
 
-.pure-u-1,
-.main__content__bio,
-.main__content__bio__name,
-.main__content__bio__desc,
-.main__content__bio__links,
-.main__content__bio__meta,
+.pure-u-1, .main__content__bio, .main__content__bio__name, .main__content__bio__desc, .main__content__bio__links, .main__content__bio__meta,
 .pure-u-1-1,
 .pure-u-5-5,
 .pure-u-24-24 {
@@ -1168,7 +1160,8 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-button-hover,
 .pure-button:hover,
 .main__content__bio__meta__tag:hover,
-.pure-button:focus, .main__content__bio__meta__tag:focus {
+.pure-button:focus,
+.main__content__bio__meta__tag:focus {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
@@ -1181,14 +1174,14 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 
 .pure-button-active,
-.pure-button:active, .main__content__bio__meta__tag:active {
+.pure-button:active,
+.main__content__bio__meta__tag:active {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
   border-color: #000\9;
 }
 
-.pure-button[disabled],
-[disabled].main__content__bio__meta__tag,
+.pure-button[disabled], [disabled].main__content__bio__meta__tag,
 .pure-button-disabled,
 .pure-button-disabled:hover,
 .pure-button-disabled:focus,
@@ -1751,7 +1744,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-menu-horizontal .pure-menu-separator {
   width: 1px;
   height: 1.3em;
-  margin: 0 0.3em;
+  margin: 0 .3em;
 }
 
 .pure-menu-heading {
@@ -1770,7 +1763,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-menu-link,
 .pure-menu-disabled,
 .pure-menu-heading {
-  padding: 0.5em 1em;
+  padding: .5em 1em;
 }
 
 .pure-menu-disabled {
@@ -2179,8 +2172,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 45.8333%;
     *width: 45.8023%;
   }
-  .pure-u-md-1-2,
-  .main__content__bio,
+  .pure-u-md-1-2, .main__content__bio,
   .pure-u-md-12-24 {
     width: 50%;
     *width: 49.9690%;
