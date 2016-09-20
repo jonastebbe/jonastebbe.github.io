@@ -1,4 +1,99 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400|Raleway:200);
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-UltraLight.eot");
+  src: url("../fonts/AvenirNext-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLight.woff") format("woff"), url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-UltraLightItalic.eot");
+  src: url("../fonts/AvenirNext-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLightItalic.woff") format("woff"), url("../fonts/AvenirNext-UltraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Regular.eot");
+  src: url("../fonts/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Regular.woff") format("woff"), url("../fonts/AvenirNext-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Italic.eot");
+  src: url("../fonts/AvenirNext-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Italic.woff") format("woff"), url("../fonts/AvenirNext-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Medium.eot");
+  src: url("../fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Medium.woff") format("woff"), url("../fonts/AvenirNext-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-MediumItalic.eot");
+  src: url("../fonts/AvenirNext-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-MediumItalic.woff") format("woff"), url("../fonts/AvenirNext-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-DemiBold.eot");
+  src: url("../fonts/AvenirNext-DemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-DemiBold.woff") format("woff"), url("../fonts/AvenirNext-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-DemiBoldItalic.eot");
+  src: url("../fonts/AvenirNext-DemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-DemiBoldItalic.woff") format("woff"), url("../fonts/AvenirNext-DemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Bold.eot");
+  src: url("../fonts/AvenirNext-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Bold.woff") format("woff"), url("../fonts/AvenirNext-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-BoldItalic.eot");
+  src: url("../fonts/AvenirNext-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-BoldItalic.woff") format("woff"), url("../fonts/AvenirNext-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Heavy.eot");
+  src: url("../fonts/AvenirNext-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Heavy.woff") format("woff"), url("../fonts/AvenirNext-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-HeavyItalic.eot");
+  src: url("../fonts/AvenirNext-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-HeavyItalic.woff") format("woff"), url("../fonts/AvenirNext-HeavyItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -831,7 +926,7 @@ th {
 }
 
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g, .main__content {
+.pure-g, .header, .footer, .section, .photo-grid {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -880,7 +975,10 @@ th {
 */
 .opera-only :-o-prefocus,
 .pure-g,
-.main__content {
+.header,
+.footer,
+.section,
+.photo-grid {
   word-spacing: -0.43em;
 }
 
@@ -899,13 +997,18 @@ th {
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"], .main__content [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"] {
   font-family: sans-serif;
 }
 
-.pure-u-1, .main__content__bio, .main__content__bio__name, .main__content__bio__desc, .main__content__bio__links, .main__content__bio__meta,
+.pure-u-1,
 .pure-u-1-1,
+.header__logo,
+.header__links,
+.footer__logo,
+.footer__links,
 .pure-u-1-2,
+.photo-grid__photo,
 .pure-u-1-3,
 .pure-u-2-3,
 .pure-u-1-4,
@@ -917,11 +1020,13 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-u-5-5,
 .pure-u-1-6,
 .pure-u-5-6,
+.section__content,
 .pure-u-1-8,
 .pure-u-3-8,
 .pure-u-5-8,
 .pure-u-7-8,
 .pure-u-1-12,
+.section__label,
 .pure-u-5-12,
 .pure-u-7-12,
 .pure-u-11-12,
@@ -963,7 +1068,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 4.1357%;
 }
 
-.pure-u-1-12,
+.pure-u-1-12, .section__label,
 .pure-u-2-24 {
   width: 8.3333%;
   *width: 8.3023%;
@@ -1030,7 +1135,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 45.8023%;
 }
 
-.pure-u-1-2,
+.pure-u-1-2, .photo-grid__photo,
 .pure-u-12-24 {
   width: 50%;
   *width: 49.9690%;
@@ -1085,7 +1190,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 79.9690%;
 }
 
-.pure-u-5-6,
+.pure-u-5-6, .section__content,
 .pure-u-20-24 {
   width: 83.3333%;
   *width: 83.3023%;
@@ -1108,14 +1213,18 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 95.8023%;
 }
 
-.pure-u-1, .main__content__bio, .main__content__bio__name, .main__content__bio__desc, .main__content__bio__links, .main__content__bio__meta,
+.pure-u-1,
 .pure-u-1-1,
+.header__logo,
+.header__links,
+.footer__logo,
+.footer__links,
 .pure-u-5-5,
 .pure-u-24-24 {
   width: 100%;
 }
 
-.pure-button, .main__content__bio__meta__tag {
+.pure-button {
   /* Structure */
   display: inline-block;
   zoom: 1;
@@ -1134,13 +1243,13 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 
 /* Firefox: Get rid of the inner focus border */
-.pure-button::-moz-focus-inner, .main__content__bio__meta__tag::-moz-focus-inner {
+.pure-button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
 /*csslint outline-none:false*/
-.pure-button, .main__content__bio__meta__tag {
+.pure-button {
   font-family: inherit;
   font-size: 100%;
   padding: 0.5em 1em;
@@ -1159,9 +1268,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
 .pure-button-hover,
 .pure-button:hover,
-.main__content__bio__meta__tag:hover,
-.pure-button:focus,
-.main__content__bio__meta__tag:focus {
+.pure-button:focus {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
@@ -1169,19 +1276,18 @@ this the same font stack that Normalize.css sets for the `body`.
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
 
-.pure-button:focus, .main__content__bio__meta__tag:focus {
+.pure-button:focus {
   outline: 0;
 }
 
 .pure-button-active,
-.pure-button:active,
-.main__content__bio__meta__tag:active {
+.pure-button:active {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
   border-color: #000\9;
 }
 
-.pure-button[disabled], [disabled].main__content__bio__meta__tag,
+.pure-button[disabled],
 .pure-button-disabled,
 .pure-button-disabled:hover,
 .pure-button-disabled:focus,
@@ -1203,7 +1309,7 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 
 /* Firefox: Get rid of the inner focus border */
-.pure-button::-moz-focus-inner, .main__content__bio__meta__tag::-moz-focus-inner {
+.pure-button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
@@ -2061,23 +2167,29 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-md-1,
   .pure-u-md-1-1,
   .pure-u-md-1-2,
-  .main__content__bio,
+  .footer__logo,
+  .footer__links,
+  .photo-grid__photo,
   .pure-u-md-1-3,
   .pure-u-md-2-3,
   .pure-u-md-1-4,
   .pure-u-md-3-4,
   .pure-u-md-1-5,
+  .header__logo,
   .pure-u-md-2-5,
   .pure-u-md-3-5,
   .pure-u-md-4-5,
+  .header__links,
   .pure-u-md-5-5,
   .pure-u-md-1-6,
   .pure-u-md-5-6,
+  .section__content,
   .pure-u-md-1-8,
   .pure-u-md-3-8,
   .pure-u-md-5-8,
   .pure-u-md-7-8,
   .pure-u-md-1-12,
+  .section__label,
   .pure-u-md-5-12,
   .pure-u-md-7-12,
   .pure-u-md-11-12,
@@ -2117,7 +2229,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 4.1667%;
     *width: 4.1357%;
   }
-  .pure-u-md-1-12,
+  .pure-u-md-1-12, .section__label,
   .pure-u-md-2-24 {
     width: 8.3333%;
     *width: 8.3023%;
@@ -2132,7 +2244,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 16.6667%;
     *width: 16.6357%;
   }
-  .pure-u-md-1-5 {
+  .pure-u-md-1-5, .header__logo {
     width: 20%;
     *width: 19.9690%;
   }
@@ -2172,7 +2284,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 45.8333%;
     *width: 45.8023%;
   }
-  .pure-u-md-1-2, .main__content__bio,
+  .pure-u-md-1-2, .footer__logo, .footer__links, .photo-grid__photo,
   .pure-u-md-12-24 {
     width: 50%;
     *width: 49.9690%;
@@ -2213,11 +2325,11 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 79.1667%;
     *width: 79.1357%;
   }
-  .pure-u-md-4-5 {
+  .pure-u-md-4-5, .header__links {
     width: 80%;
     *width: 79.9690%;
   }
-  .pure-u-md-5-6,
+  .pure-u-md-5-6, .section__content,
   .pure-u-md-20-24 {
     width: 83.3333%;
     *width: 83.3023%;
@@ -2617,24 +2729,24 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 
 a:link {
-  color: #ff0000;
+  color: #000000;
 }
 
 a:visited {
-  color: #00ff00;
+  color: #000000;
 }
 
 a:hover {
-  color: #ff00ff;
+  color: #000000;
 }
 
 a:active {
-  color: #0000ff;
+  color: #000000;
 }
 
-html, button, input, select, textarea,
-.pure-g [class*="pure-u"], .main__content [class*="pure-u"] {
-  font-family: "Raleway", "Helvetica", sans-serif !important;
+html, body, button, input, select, textarea,
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"] {
+  font-family: "Avenir Next", "Helvetica", sans-serif !important;
 }
 
 html {
@@ -2647,98 +2759,195 @@ body {
   width: 100%;
 }
 
-.main {
-  min-height: 100%;
-  color: white;
-  background-color: #232229;
-  background: url("../images/portrait-bg.jpg");
-  background-size: cover;
-  background-position: center top;
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.main__content {
-  min-height: 100%;
-  max-width: 1190px;
-  padding: 0 1em;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .wrapper {
+    width: 740px;
+  }
 }
 
-.main__content__bio {
-  padding-top: 10em;
-  font-family: "Raleway", "Helvetica", sans-serif !important;
+@media (min-width: 992px) {
+  .wrapper {
+    width: 960px;
+  }
 }
 
-.main__content__bio__name {
-  font-size: 2.5em;
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1170px;
+  }
 }
 
-.main__content__bio__name h1 {
-  color: #CACED2;
-  font-weight: 600;
-  font-family: "Montserrat", "Helvetica", sans-serif !important;
-  margin-bottom: 0.1em;
-  line-height: 0.8;
+.header {
+  margin-top: 50px;
 }
 
-.main__content__bio__desc {
-  font-family: "Raleway", "Helvetica", sans-serif !important;
-  font-weight: 200;
-  line-height: 1.7;
+.header__logo h1 {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin: 0;
 }
 
-.main__content__bio__divider {
-  margin: 20px 0;
-  opacity: 0.2;
-  border-width: 1px;
-  border-color: white;
+@media screen and (max-width: 35.5em) {
+  .header__logo {
+    text-align: center;
+  }
 }
 
-.main__content__bio__links__intro {
-  font-family: "Raleway", "Helvetica", sans-serif !important;
+.header__links {
+  text-align: right;
+}
+
+.header__links::before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  text-align: right;
+}
+
+@media screen and (max-width: 35.5em) {
+  .header__links {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.footer {
+  margin: 50px 0;
+}
+
+.footer__logo h4 {
+  color: #7C7A7A;
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+@media screen and (max-width: 35.5em) {
+  .footer__logo {
+    text-align: center;
+  }
+}
+
+.footer__links {
+  text-align: right;
+}
+
+.footer__links::before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  text-align: right;
+}
+
+@media screen and (max-width: 35.5em) {
+  .footer__links {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.section__label {
+  position: relative;
+}
+
+.section__label p {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-right: 1em;
-  opacity: 0.5;
-  color: #CACED2;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+          transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
-.main__content__bio__links__link {
-  font-family: "Raleway", "Helvetica", sans-serif !important;
-  margin-right: 15px;
+.section__label p::before {
+  background-color: black;
+  content: '';
+  display: inline-block;
+  height: 0.2em;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  margin-right: 10px;
 }
 
-.main__content__bio__links__link img {
-  height: 1em;
+@media screen and (max-width: 35.5em) {
+  .section__label p {
+    font-size: 10px;
+  }
+  .section__label p::before {
+    height: 0.15em;
+    width: 35px;
+  }
+}
+
+.section__content p {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-size: 35px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: normal;
+  padding: 50px;
+  background-color: #F1FAEE;
+}
+
+@media screen and (max-width: 35.5em) {
+  .section__content p {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+.social-icon {
+  font-family: "Avenir Next", "Helvetica", sans-serif !important;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-icon:last-of-type {
+  margin-right: 0px;
+}
+
+.social-icon img {
+  height: 15px;
   -webkit-transition: -webkit-transform 300ms ease;
           transition: transform 300ms ease;
 }
 
-.main__content__bio__links__link img:hover, .main__content__bio__links__link img:focus {
+.social-icon img:hover, .social-icon img:focus {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.main__content__bio__meta__intro {
-  font-family: "Raleway", "Helvetica", sans-serif !important;
-  text-transform: uppercase;
-  margin-right: 1em;
-  opacity: 0.5;
-  color: #CACED2;
+.photo-grid__photo__wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.main__content__bio__meta__tag {
-  font-family: "Montserrat", "Helvetica", sans-serif !important;
-  -webkit-transition: background-color 200ms ease;
-          transition: background-color 200ms ease;
-  font-size: 50%;
-  background-color: #848196;
-  color: #232229 !important;
-  padding: 5px 10px;
-  border-radius: 20px;
-  margin-right: 10px;
+.photo-grid__photo__wrapper img {
+  width: 100%;
 }
 
-.main__content__bio__meta__tag:hover, .main__content__bio__meta__tag:focus {
-  background-color: #d5d4dc;
+.photo-grid__photo:nth-child(odd) > .photo-grid__photo__wrapper {
+  padding-right: 10px;
+}
+
+.photo-grid__photo:nth-child(even) > .photo-grid__photo__wrapper {
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
