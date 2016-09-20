@@ -1,0 +1,36 @@
+.header {
+    @extend .pure-g;
+    margin-top: 50px;
+    &__logo {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-5;
+        a {
+            text-decoration: none;
+            h1 {
+                font-family: $font-stack-heading;
+                font-weight: 700;
+                letter-spacing: 0.3em;
+                margin: 0;
+            }
+            @media screen and (max-width: 35.5em) {
+                text-align: center;
+            }
+        }
+    }
+    &__links {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-4-5;
+        text-align: right;
+        &::before {
+           content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            text-align: right;
+        }
+        @media screen and (max-width: 35.5em) {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}

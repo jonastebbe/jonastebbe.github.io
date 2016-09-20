@@ -1,0 +1,58 @@
+extends ../_layouts/base
+
+include ../_modules/header/header
+include ../_modules/footer/footer
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    div.wrapper
+
+        +header(baseUrl)
+
+        div.section
+            div.album-grid
+                div.album-grid__header
+                    h1 Bavaria
+                    h2 '16
+                div.album-grid__teaser
+                    div.album-grid__teaser__wrapper
+                        img(src="#{baseUrl}images/photos/bavaria-1.jpg")
+                div.album-grid__small-teaser
+                    div.album-grid__small-teaser__wrapper
+                        img(src="#{baseUrl}images/photos/bavaria-2.jpg")
+                    div.album-grid__small-teaser__wrapper
+                        img(src="#{baseUrl}images/photos/bavaria-3.jpg")
+
+        div.section
+            div.album-grid
+                div.album-grid__header
+                    h1 Prague
+                    h2 '16
+                div.album-grid__teaser
+                    div.album-grid__teaser__wrapper
+                        img(src="#{baseUrl}images/photos/prague-1.jpg")
+                div.album-grid__small-teaser
+                    div.album-grid__small-teaser__wrapper
+                        img(src="#{baseUrl}images/photos/prague-2.jpg")
+                    div.album-grid__small-teaser__wrapper
+                        img(src="#{baseUrl}images/photos/prague-3.jpg")
+
+        div.section
+            div.album-grid
+                div.album-grid__header
+                    h1 USA
+                    h2 '14
+                div.album-grid__teaser
+                    div.album-grid__teaser__wrapper
+                        img(src="#{baseUrl}images/photos/usa-1.jpg")
+                div.album-grid__small-teaser
+                    div.album-grid__small-teaser__wrapper
+                        img(src="#{baseUrl}images/photos/usa-2.jpg")
+                    div.album-grid__small-teaser__wrapper
+                        img(src="#{baseUrl}images/photos/usa-3.jpg")
+
+
+        +footer(baseUrl)

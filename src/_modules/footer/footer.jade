@@ -1,0 +1,19 @@
+mixin footer(baseUrl)
+  - var _baseUrl = baseUrl || ''
+
+  div.footer
+    div.footer__logo
+      h4 JONAS TEBBE
+    div.footer__links
+      a.social-icon(href="mailto:jonastebbe@googlemail.com" target="_blank")
+        img(src="#{_baseUrl}images/icons/mail-gray.svg")
+      a.social-icon(href="https://www.twitter.com/jonastebbe" target="_blank")
+        img(src="#{_baseUrl}images/icons/twitter-gray.svg")
+      a.social-icon(href="https://de.linkedin.com/in/jonastebbe" target="_blank")
+        img(src="#{_baseUrl}images/icons/linkedin-gray.svg")
+      a.social-icon(href="https://www.facebook.com/jonas.tebbe" target="_blank")
+        img(src="#{_baseUrl}images/icons/facebook-gray.svg")
+      a.social-icon(href="https://www.instagram.com/jonastebbe" target="_blank")
+        img(src="#{_baseUrl}images/icons/instagram-gray.svg")
+      a.social-icon(href="https://www.github.com/jonastebbe" target="_blank")
+        img(src="#{_baseUrl}images/icons/github-gray.svg")

@@ -18,6 +18,8 @@ $font-stack-body: "Avenir Next", "Helvetica", sans-serif;
 
 // Import Modules
 @import '../_modules/link/link';
+@import '../_modules/header/header';
+@import '../_modules/footer/footer';
 
 html, body, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
@@ -52,75 +54,6 @@ body {
   .wrapper {
     width: 1170px;
   }
-}
-
-.header {
-    @extend .pure-g;
-    margin-top: 50px;
-    &__logo {
-        @extend .pure-u-1-1;
-        @extend .pure-u-md-1-5;
-        h1 {
-            font-family: $font-stack-heading;
-            font-weight: 700;
-            letter-spacing: 0.3em;
-            margin: 0;
-        }
-        @media screen and (max-width: 35.5em) {
-            text-align: center;
-        }
-    }
-    &__links {
-        @extend .pure-u-1-1;
-        @extend .pure-u-md-4-5;
-        text-align: right;
-        &::before {
-           content: ' ';
-            display: inline-block;
-            vertical-align: middle;
-            height: 100%;
-            text-align: right;
-        }
-        @media screen and (max-width: 35.5em) {
-            margin-top: 10px;
-            text-align: center;
-        }
-    }
-}
-
-.footer {
-    @extend .pure-g;
-    margin: 50px 0;
-    &__logo {
-        @extend .pure-u-1-1;
-        @extend .pure-u-md-1-2;
-        h4 {
-            color: $gray;
-            font-family: $font-stack-heading;
-            font-weight: 700;
-            letter-spacing: 0.3em;
-            margin: 0;
-        }
-        @media screen and (max-width: 35.5em) {
-            text-align: center;
-        }
-    }
-    &__links {
-        @extend .pure-u-1-1;
-        @extend .pure-u-md-1-2;
-        text-align: right;
-        &::before {
-           content: ' ';
-            display: inline-block;
-            vertical-align: middle;
-            height: 100%;
-            text-align: right;
-        }
-        @media screen and (max-width: 35.5em) {
-            text-align: center;
-            margin-top: 20px;
-        }
-    }
 }
 
 .section {
@@ -214,4 +147,86 @@ body {
     &__photo:nth-child(even) > .photo-grid__photo__wrapper {
         padding-left: 10px;
     }
+}
+
+.more-link {
+    text-align: center;
+    padding: 25px;
+    a {
+        font-family: $font-stack-heading;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px 20px;
+        border: 3px solid $text-color;
+        @media screen and (max-width: 35.5em) {
+            padding: 20px;
+        }
+    }
+}
+
+.album-grid {
+    @extend .pure-g;
+    &__header {
+        @extend .pure-u-1-1;
+        margin-top: 50px;
+        h1 {
+            font-family: $font-stack-heading;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: normal;
+            display: inline-block;
+        }
+        h2 {
+            color: $gray;
+            font-family: $font-stack-heading;
+            font-weight: 500;
+            font-style: italic;
+            font-size: 18px;
+            letter-spacing: 0.3em;
+            margin: 0;
+            letter-spacing: normal;
+            display: inline-block;
+        }
+    }
+    &__teaser {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-2-3;
+        &__wrapper {
+            padding-right: 10px;
+            img {
+                width: 100%;
+            }
+            @media screen and (max-width: 35.5em) {
+                padding-right: 0px;
+            }
+        }
+    }
+    &__small-teaser {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-3;
+        &__wrapper {
+            padding-left: 10px;
+            img {
+                width: 100%;
+            }
+            &:nth-child(odd) {
+                padding-bottom: 2.5px;
+            }
+            &:nth-child(even) {
+                padding-top: 2.5px;
+            }
+            @media screen and (max-width: 35.5em) {
+                width: 50%;
+                float: left;
+                padding: 0px !important;
+            }
+        }
+    }
+    margin-bottom: 50px;
 }
