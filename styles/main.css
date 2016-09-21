@@ -926,7 +926,7 @@ th {
 }
 
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g, .header, .footer, .section, .photo-grid, .album-grid, .album-grid__half-teaser, .photo-stream {
+.pure-g, .header, .footer, .section, .photo-grid, .album-grid, .album-grid__half-teaser, .album-grid__third-teaser, .photo-stream {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -981,6 +981,7 @@ th {
 .photo-grid,
 .album-grid,
 .album-grid__half-teaser,
+.album-grid__third-teaser,
 .photo-stream {
   word-spacing: -0.43em;
 }
@@ -1000,7 +1001,7 @@ th {
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
   font-family: sans-serif;
 }
 
@@ -1011,13 +1012,14 @@ this the same font stack that Normalize.css sets for the `body`.
 .footer__logo,
 .footer__links,
 .album-grid__header,
-.album-grid__teaser,
-.album-grid__small-teaser,
+.album-grid__big-teaser,
+.album-grid__stacked-teaser,
 .album-grid .more-link,
 .pure-u-1-2,
 .photo-grid__photo,
 .album-grid__half-teaser__wrapper,
 .pure-u-1-3,
+.album-grid__third-teaser__wrapper,
 .pure-u-2-3,
 .pure-u-1-4,
 .pure-u-3-4,
@@ -1116,7 +1118,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 29.1357%;
 }
 
-.pure-u-1-3,
+.pure-u-1-3, .album-grid__third-teaser__wrapper,
 .pure-u-8-24 {
   width: 33.3333%;
   *width: 33.3023%;
@@ -1229,8 +1231,8 @@ this the same font stack that Normalize.css sets for the `body`.
 .footer__logo,
 .footer__links,
 .album-grid__header,
-.album-grid__teaser,
-.album-grid__small-teaser,
+.album-grid__big-teaser,
+.album-grid__stacked-teaser,
 .album-grid .more-link,
 .pure-u-5-5,
 .pure-u-24-24 {
@@ -2186,9 +2188,9 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .footer__links,
   .photo-grid__photo,
   .pure-u-md-1-3,
-  .album-grid__small-teaser,
+  .album-grid__stacked-teaser,
   .pure-u-md-2-3,
-  .album-grid__teaser,
+  .album-grid__big-teaser,
   .pure-u-md-1-4,
   .pure-u-md-3-4,
   .pure-u-md-1-5,
@@ -2276,7 +2278,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 29.1667%;
     *width: 29.1357%;
   }
-  .pure-u-md-1-3, .album-grid__small-teaser,
+  .pure-u-md-1-3, .album-grid__stacked-teaser,
   .pure-u-md-8-24 {
     width: 33.3333%;
     *width: 33.3023%;
@@ -2322,7 +2324,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 62.5000%;
     *width: 62.4690%;
   }
-  .pure-u-md-2-3, .album-grid__teaser,
+  .pure-u-md-2-3, .album-grid__big-teaser,
   .pure-u-md-16-24 {
     width: 66.6667%;
     *width: 66.6357%;
@@ -2849,7 +2851,7 @@ a:active {
 }
 
 html, body, button, input, select, textarea,
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
   font-family: "Avenir Next", "Helvetica", sans-serif !important;
 }
 
@@ -3081,53 +3083,81 @@ body {
   display: inline-block;
 }
 
-.album-grid__teaser__wrapper {
+.album-grid__big-teaser__wrapper {
   padding-right: 10px;
 }
 
-.album-grid__teaser__wrapper img {
+.album-grid__big-teaser__wrapper img {
   width: 100%;
 }
 
 @media screen and (max-width: 35.5em) {
-  .album-grid__teaser__wrapper {
+  .album-grid__big-teaser__wrapper {
     padding-right: 0px;
   }
 }
 
-.album-grid__small-teaser__wrapper {
+.album-grid__big-teaser__wrapper--inverted {
+  padding-right: 0px;
   padding-left: 10px;
 }
 
-.album-grid__small-teaser__wrapper img {
+@media screen and (max-width: 35.5em) {
+  .album-grid__big-teaser__wrapper--inverted {
+    padding-left: 0px;
+  }
+}
+
+.album-grid__stacked-teaser__wrapper {
+  padding-left: 10px;
+}
+
+.album-grid__stacked-teaser__wrapper img {
   width: 100%;
 }
 
-.album-grid__small-teaser__wrapper:nth-child(odd) {
+.album-grid__stacked-teaser__wrapper:nth-child(odd) {
   padding-bottom: 2.5px;
 }
 
 @media screen and (max-width: 35.5em) {
-  .album-grid__small-teaser__wrapper:nth-child(odd) {
+  .album-grid__stacked-teaser__wrapper:nth-child(odd) {
     padding: 5px 5px 0px 0px;
   }
 }
 
-.album-grid__small-teaser__wrapper:nth-child(even) {
+.album-grid__stacked-teaser__wrapper:nth-child(even) {
   padding-top: 2.5px;
 }
 
 @media screen and (max-width: 35.5em) {
-  .album-grid__small-teaser__wrapper:nth-child(even) {
+  .album-grid__stacked-teaser__wrapper:nth-child(even) {
     padding: 5px 0px 0px 5px;
   }
 }
 
 @media screen and (max-width: 35.5em) {
-  .album-grid__small-teaser__wrapper {
+  .album-grid__stacked-teaser__wrapper {
     width: -webkit-calc((100% - 10px) / 2);
     width: calc((100% - 10px) / 2);
     float: left;
+  }
+}
+
+.album-grid__stacked-teaser__wrapper--inverted {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__stacked-teaser__wrapper--inverted:nth-child(odd) {
+    padding: 5px 0px 0px 5px;
+  }
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__stacked-teaser__wrapper--inverted:nth-child(even) {
+    padding: 5px 5px 0px 0px;
   }
 }
 
@@ -3162,6 +3192,46 @@ body {
     padding-top: 10px;
     width: -webkit-calc(100% - 5px);
     width: calc(100% - 5px);
+  }
+}
+
+.album-grid__third-teaser__wrapper img {
+  padding-top: 20px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__third-teaser__wrapper img {
+    padding-top: 10px;
+    width: -webkit-calc(100% - 5px);
+    width: calc(100% - 5px);
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+  }
+}
+
+.album-grid__third-teaser__wrapper:first-of-type img {
+  padding-right: 10px;
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__third-teaser__wrapper:first-of-type img {
+    padding-right: 5px;
+  }
+}
+
+.album-grid__third-teaser__wrapper:last-of-type img {
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .album-grid__third-teaser__wrapper:last-of-type img {
+    padding-left: 5px;
   }
 }
 
