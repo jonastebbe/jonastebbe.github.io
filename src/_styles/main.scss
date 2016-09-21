@@ -83,7 +83,7 @@ body {
                 background-color: $text-color;
                 content: '';
                 display: inline-block;
-                height: 0.2em;
+                height: 3px;
                 position: relative;
                 vertical-align: middle;
                 width: 50px;
@@ -114,6 +114,15 @@ body {
                 padding: 20px;
             }
         }
+        .more-link {
+            background-color: $primary;
+            margin-top: -75px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &__content--centered {
+        text-align: center;
     }
 }
 
@@ -166,10 +175,19 @@ body {
         letter-spacing: 0.3em;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 5px 20px;
+        padding: 10px 20px;
         border: 3px solid $text-color;
+        transition: background-color 400ms ease;
         @media screen and (max-width: 35.5em) {
             padding: 20px;
+            font-size: 10px;
+            padding: 7.5px 10px;
+            border-width: 2px;
+        }
+        &:hover, &:active, &:focus {
+            background-color: $text-color;
+            color: white;
+            transition: background-color 400ms ease;
         }
     }
 }
@@ -271,5 +289,30 @@ body {
             }
         }
     }
-    margin-bottom: 50px;
+    .more-link {
+        @extend .pure-u-1-1;
+    }
+    margin-bottom: 20px;
+}
+
+.photo-stream {
+    @extend .pure-g;
+    &__photo {
+        @extend .pure-u-5-6;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        &--portrait {
+            img {
+                width: 50%;
+                margin-left: 25%;
+                @media screen and (max-width: 35.5em) {
+                    width: 100%;
+                    margin-left: 0%;
+                }
+            }
+        }
+    }
 }

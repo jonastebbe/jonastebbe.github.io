@@ -3,14 +3,24 @@
     margin-top: 50px;
     &__logo {
         @extend .pure-u-1-1;
-        @extend .pure-u-md-1-5;
+        @extend .pure-u-md-1-2;
         a {
             text-decoration: none;
+            img {
+                display: inline-block;
+                width: 35px;
+                border-radius: 50px;
+                margin-right: 10px;
+            }
             h1 {
+                border-left: 3px solid $text-color;
+                display: inline-block;
                 font-family: $font-stack-heading;
                 font-weight: 700;
                 letter-spacing: 0.3em;
                 margin: 0;
+                padding-left: 10px;
+                vertical-align: bottom;
             }
             @media screen and (max-width: 35.5em) {
                 text-align: center;
@@ -19,7 +29,7 @@
     }
     &__links {
         @extend .pure-u-1-1;
-        @extend .pure-u-md-4-5;
+        @extend .pure-u-md-1-2;
         text-align: right;
         &::before {
            content: ' ';
