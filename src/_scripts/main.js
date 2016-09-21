@@ -5,7 +5,11 @@
 
 import $ from 'jquery';
 import Link from '../_modules/link/link';
+import Blazy from 'blazy';
 
 $(() => {
   new Link(); // Activate Link modules logic
 });
+
+ var bLazy = new Blazy({
+ });
