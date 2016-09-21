@@ -17,13 +17,17 @@ block content
                 div.album-grid__header
                     h1 Bavaria
                     h2 '16
-                div.album-grid__teaser
-                    div.album-grid__teaser__wrapper
+                div.album-grid__third-teaser
+                    div.album-grid__third-teaser__wrapper
+                        img(data-src="#{baseUrl}images/photos/bavaria-4.jpg" src="#{baseUrl}images/photos/bavaria-4.jpg" class="b-lazy")
+                    div.album-grid__third-teaser__wrapper
+                        img(data-src="#{baseUrl}images/photos/bavaria-11.jpg" src="#{baseUrl}images/photos/bavaria-11.jpg" class="b-lazy")
+                    div.album-grid__third-teaser__wrapper
+                        img(data-src="#{baseUrl}images/photos/bavaria-18.jpg" src="#{baseUrl}images/photos/bavaria-18.jpg" class="b-lazy")
+                div.album-grid__half-teaser
+                    div.album-grid__half-teaser__wrapper
                         img(data-src="#{baseUrl}images/photos/bavaria-1.jpg" src="#{baseUrl}images/photos/bavaria-1.jpg" class="b-lazy")
-                div.album-grid__small-teaser
-                    div.album-grid__small-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/bavaria-2.jpg" src="#{baseUrl}images/photos/bavaria-2.jpg" class="b-lazy")
-                    div.album-grid__small-teaser__wrapper
+                    div.album-grid__half-teaser__wrapper
                         img(data-src="#{baseUrl}images/photos/bavaria-3.jpg" src="#{baseUrl}images/photos/bavaria-3.jpg" class="b-lazy")
                 div.more-link
                     #[a(href="/photo/bavaria") more photos]
@@ -33,13 +37,13 @@ block content
                 div.album-grid__header
                     h1 Prague
                     h2 '16
-                div.album-grid__teaser
-                    div.album-grid__teaser__wrapper
+                div.album-grid__big-teaser
+                    div.album-grid__big-teaser__wrapper
                         img(data-src="#{baseUrl}images/photos/prague-1.jpg" src="#{baseUrl}images/photos/prague-1.jpg" class="b-lazy")
-                div.album-grid__small-teaser
-                    div.album-grid__small-teaser__wrapper
+                div.album-grid__stacked-teaser
+                    div.album-grid__stacked-teaser__wrapper
                         img(data-src="#{baseUrl}images/photos/prague-2.jpg" src="#{baseUrl}images/photos/prague-2.jpg" class="b-lazy")
-                    div.album-grid__small-teaser__wrapper
+                    div.album-grid__stacked-teaser__wrapper
                         img(data-src="#{baseUrl}images/photos/prague-3.jpg" src="#{baseUrl}images/photos/prague-3.jpg" class="b-lazy")
                 div.album-grid__half-teaser
                     div.album-grid__half-teaser__wrapper
@@ -54,13 +58,13 @@ block content
                 div.album-grid__header
                     h1 USA
                     h2 '14
-                div.album-grid__teaser
-                    div.album-grid__teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/usa-1.jpg" src="#{baseUrl}images/photos/usa-1.jpg" class="b-lazy")
-                div.album-grid__small-teaser
-                    div.album-grid__small-teaser__wrapper
+                div.album-grid__stacked-teaser.album-grid__stacked-teaser--inverted
+                    div.album-grid__stacked-teaser__wrapper.album-grid__stacked-teaser__wrapper--inverted
                         img(data-src="#{baseUrl}images/photos/usa-2.jpg" src="#{baseUrl}images/photos/usa-2.jpg" class="b-lazy")
-                    div.album-grid__small-teaser__wrapper
+                    div.album-grid__stacked-teaser__wrapper.album-grid__stacked-teaser__wrapper--inverted
                         img(data-src="#{baseUrl}images/photos/usa-3.jpg" src="#{baseUrl}images/photos/usa-3.jpg" class="b-lazy")
+                div.album-grid__big-teaser
+                    div.album-grid__big-teaser__wrapper.album-grid__big-teaser__wrapper--inverted
+                        img(data-src="#{baseUrl}images/photos/usa-1.jpg" src="#{baseUrl}images/photos/usa-1.jpg" class="b-lazy")
 
         +footer(baseUrl)

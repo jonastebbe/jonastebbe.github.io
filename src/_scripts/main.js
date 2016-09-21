@@ -9,7 +9,7 @@ import Blazy from 'blazy';
 
 $(() => {
   new Link(); // Activate Link modules logic
+  var bLazy = new Blazy({
+  });
+  bLazy.revalidate();
 });
-
- var bLazy = new Blazy({
- });
