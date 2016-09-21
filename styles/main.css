@@ -2786,8 +2786,9 @@ a:active {
 }
 
 @media screen and (max-width: 35.5em) {
-  .header__logo a {
+  .header__logo {
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -2892,6 +2893,16 @@ body {
   }
 }
 
+.b-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 1000ms;
+          transition: opacity 1000ms;
+}
+
+.b-loaded {
+  opacity: 1;
+}
+
 .section__label {
   position: relative;
 }
@@ -2948,11 +2959,18 @@ body {
   }
 }
 
-.section__content .more-link {
+.section__content .more-link--inline {
   background-color: #F1FAEE;
   margin-top: -75px;
   margin-bottom: 50px;
   padding-bottom: 50px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .section__content .more-link--inline {
+    margin-top: -35px;
+    padding-bottom: 30px;
+  }
 }
 
 .section__content--centered {
