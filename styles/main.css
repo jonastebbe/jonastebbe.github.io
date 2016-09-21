@@ -926,7 +926,7 @@ th {
 }
 
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g, .header, .footer, .section, .photo-grid, .album-grid, .album-grid__half-teaser {
+.pure-g, .header, .footer, .section, .photo-grid, .album-grid, .album-grid__half-teaser, .photo-stream {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -980,7 +980,8 @@ th {
 .section,
 .photo-grid,
 .album-grid,
-.album-grid__half-teaser {
+.album-grid__half-teaser,
+.photo-stream {
   word-spacing: -0.43em;
 }
 
@@ -999,7 +1000,7 @@ th {
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
   font-family: sans-serif;
 }
 
@@ -1012,6 +1013,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .album-grid__header,
 .album-grid__teaser,
 .album-grid__small-teaser,
+.album-grid .more-link,
 .pure-u-1-2,
 .photo-grid__photo,
 .album-grid__half-teaser__wrapper,
@@ -1027,6 +1029,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-u-1-6,
 .pure-u-5-6,
 .section__content,
+.photo-stream__photo,
 .pure-u-1-8,
 .pure-u-3-8,
 .pure-u-5-8,
@@ -1196,7 +1199,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 79.9690%;
 }
 
-.pure-u-5-6, .section__content,
+.pure-u-5-6, .section__content, .photo-stream__photo,
 .pure-u-20-24 {
   width: 83.3333%;
   *width: 83.3023%;
@@ -1228,6 +1231,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .album-grid__header,
 .album-grid__teaser,
 .album-grid__small-teaser,
+.album-grid .more-link,
 .pure-u-5-5,
 .pure-u-24-24 {
   width: 100%;
@@ -2176,6 +2180,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-md-1,
   .pure-u-md-1-1,
   .pure-u-md-1-2,
+  .header__logo,
+  .header__links,
   .footer__logo,
   .footer__links,
   .photo-grid__photo,
@@ -2186,11 +2192,9 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-md-1-4,
   .pure-u-md-3-4,
   .pure-u-md-1-5,
-  .header__logo,
   .pure-u-md-2-5,
   .pure-u-md-3-5,
   .pure-u-md-4-5,
-  .header__links,
   .pure-u-md-5-5,
   .pure-u-md-1-6,
   .pure-u-md-5-6,
@@ -2255,7 +2259,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 16.6667%;
     *width: 16.6357%;
   }
-  .pure-u-md-1-5, .header__logo {
+  .pure-u-md-1-5 {
     width: 20%;
     *width: 19.9690%;
   }
@@ -2295,7 +2299,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 45.8333%;
     *width: 45.8023%;
   }
-  .pure-u-md-1-2, .footer__logo, .footer__links, .photo-grid__photo,
+  .pure-u-md-1-2, .header__logo, .header__links, .footer__logo, .footer__links, .photo-grid__photo,
   .pure-u-md-12-24 {
     width: 50%;
     *width: 49.9690%;
@@ -2336,7 +2340,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 79.1667%;
     *width: 79.1357%;
   }
-  .pure-u-md-4-5, .header__links {
+  .pure-u-md-4-5 {
     width: 80%;
     *width: 79.9690%;
   }
@@ -2763,11 +2767,22 @@ a:active {
   text-decoration: none;
 }
 
+.header__logo a img {
+  display: inline-block;
+  width: 35px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
 .header__logo a h1 {
+  border-left: 3px solid black;
+  display: inline-block;
   font-family: "Avenir Next", "Helvetica", sans-serif;
   font-weight: 700;
   letter-spacing: 0.3em;
   margin: 0;
+  padding-left: 10px;
+  vertical-align: bottom;
 }
 
 @media screen and (max-width: 35.5em) {
@@ -2833,7 +2848,7 @@ a:active {
 }
 
 html, body, button, input, select, textarea,
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
   font-family: "Avenir Next", "Helvetica", sans-serif !important;
 }
 
@@ -2899,7 +2914,7 @@ body {
   background-color: black;
   content: '';
   display: inline-block;
-  height: 0.2em;
+  height: 3px;
   position: relative;
   vertical-align: middle;
   width: 50px;
@@ -2931,6 +2946,17 @@ body {
     font-size: 14px;
     padding: 20px;
   }
+}
+
+.section__content .more-link {
+  background-color: #F1FAEE;
+  margin-top: -75px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.section__content--centered {
+  text-align: center;
 }
 
 .social-icon {
@@ -2985,18 +3011,30 @@ body {
   letter-spacing: 0.3em;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border: 3px solid black;
+  -webkit-transition: background-color 400ms ease;
+          transition: background-color 400ms ease;
 }
 
 @media screen and (max-width: 35.5em) {
   .more-link a {
     padding: 20px;
+    font-size: 10px;
+    padding: 7.5px 10px;
+    border-width: 2px;
   }
 }
 
+.more-link a:hover, .more-link a:active, .more-link a:focus {
+  background-color: black;
+  color: white;
+  -webkit-transition: background-color 400ms ease;
+          transition: background-color 400ms ease;
+}
+
 .album-grid {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .album-grid__header {
@@ -3106,6 +3144,27 @@ body {
     padding-top: 10px;
     width: -webkit-calc(100% - 5px);
     width: calc(100% - 5px);
+  }
+}
+
+.photo-stream__photo {
+  margin: 0 auto;
+}
+
+.photo-stream__photo img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.photo-stream__photo--portrait img {
+  width: 50%;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 35.5em) {
+  .photo-stream__photo--portrait img {
+    width: 100%;
+    margin-left: 0%;
   }
 }
 
