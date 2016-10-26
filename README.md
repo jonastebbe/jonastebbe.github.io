@@ -5,8 +5,7 @@ Generated on 2015-09-25 using
 
 ## Description
 
-This is an example readme file.
-Describe your site/app here.
+This is an example readme file. Describe your site/app here.
 
 ## Technologies used
 
