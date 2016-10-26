@@ -926,7 +926,7 @@ th {
 }
 
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g, .header, .footer, .section, .photo-grid, .album-grid, .album-grid__half-teaser, .album-grid__third-teaser, .photo-stream {
+.pure-g, .header, .footer, .section, .music-grid, .photo-grid, .album-grid, .album-grid__half-teaser, .album-grid__third-teaser, .photo-stream {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -978,6 +978,7 @@ th {
 .header,
 .footer,
 .section,
+.music-grid,
 .photo-grid,
 .album-grid,
 .album-grid__half-teaser,
@@ -1001,7 +1002,7 @@ th {
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .music-grid [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
   font-family: sans-serif;
 }
 
@@ -1011,6 +1012,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .header__links,
 .footer__logo,
 .footer__links,
+.music-grid__track,
 .album-grid__header,
 .album-grid__big-teaser,
 .album-grid__stacked-teaser,
@@ -1230,6 +1232,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .header__links,
 .footer__logo,
 .footer__links,
+.music-grid__track,
 .album-grid__header,
 .album-grid__big-teaser,
 .album-grid__stacked-teaser,
@@ -2181,6 +2184,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 @media screen and (min-width: 48em) {
   .pure-u-md-1,
   .pure-u-md-1-1,
+  .music-grid__track,
   .pure-u-md-1-2,
   .header__logo,
   .header__links,
@@ -2367,6 +2371,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
   .pure-u-md-1,
   .pure-u-md-1-1,
+  .music-grid__track,
   .pure-u-md-5-5,
   .pure-u-md-24-24 {
     width: 100%;
@@ -2851,7 +2856,7 @@ a:active {
 }
 
 html, body, button, input, select, textarea,
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .music-grid [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
   font-family: "Avenir Next", "Helvetica", sans-serif !important;
 }
 
@@ -2999,6 +3004,14 @@ body {
 .social-icon img:hover, .social-icon img:focus {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+}
+
+.music-grid {
+  padding: 50px 0px;
+}
+
+.music-grid__track {
+  padding: 10px 0px;
 }
 
 .photo-grid__photo__wrapper {

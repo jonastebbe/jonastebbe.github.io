@@ -155,6 +155,16 @@ body {
     }
 }
 
+.music-grid {
+    @extend .pure-g;
+    padding: 50px 0px;
+    &__track {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-1;
+        padding: 10px 0px;
+    }
+}
+
 .photo-grid {
     @extend .pure-g;
     &__photo {
