@@ -11,8 +11,6 @@ import wrench from 'wrench';
 // Load all gulp plugins based on their names
 // EX: gulp-copy -> copy
 const plugins = gulpLoadPlugins();
-// Create karma server
-const karma = require('karma').server;
 
 let config = pjson.config;
 let args = minimist(process.argv.slice(2));
@@ -55,11 +53,3 @@ gulp.task('serve', [
   'watch'
 ]);
 
-// Testing
-gulp.task('test', ['eslint'], (done) => {
-  karma.start({
-    configFile: path.join(__dirname, '/karma.conf.js'),
-    singleRun: !args.watch,
-    autoWatch: args.watch
-  }, done);
-});
