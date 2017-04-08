@@ -94,6 +94,30 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Publico';
+  src: url("../fonts/Publico-Headline-Web-Roman.eot");
+  src: url("../fonts/Publico-Headline-Web-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/Publico-Headline-Web-Roman.woff") format("woff"), url("../fonts/Publico-Headline-Web-Roman.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Publico';
+  src: url("../fonts/Publico-Headline-Web-Bold.eot");
+  src: url("../fonts/Publico-Headline-Web-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Publico-Headline-Web-Bold.woff") format("woff"), url("../fonts/Publico-Headline-Web-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Publico';
+  src: url("../fonts/Publico-Headline-Web-Black.eot");
+  src: url("../fonts/Publico-Headline-Web-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Publico-Headline-Web-Black.woff") format("woff"), url("../fonts/Publico-Headline-Web-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -3001,7 +3025,7 @@ body {
 }
 
 .section__content p {
-  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-family: "Publico", "Georgia", "Times", "Times New Roman", serif;
   font-size: 35px;
   line-height: 1.5;
   font-weight: 700;

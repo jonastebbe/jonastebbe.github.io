@@ -102,6 +102,7 @@
 	font-weight: 900;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Avenir Next';
 	src: url('../fonts/AvenirNext-HeavyItalic.eot');
@@ -110,4 +111,34 @@
 		url('../fonts/AvenirNext-HeavyItalic.ttf') format('truetype');
 	font-weight: 900;
 	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Publico';
+	src: url('../fonts/Publico-Headline-Web-Roman.eot');
+	src: url('../fonts/Publico-Headline-Web-Roman.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Publico-Headline-Web-Roman.woff') format('woff'),
+		url('../fonts/Publico-Headline-Web-Roman.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Publico';
+	src: url('../fonts/Publico-Headline-Web-Bold.eot');
+	src: url('../fonts/Publico-Headline-Web-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Publico-Headline-Web-Bold.woff') format('woff'),
+		url('../fonts/Publico-Headline-Web-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Publico';
+	src: url('../fonts/Publico-Headline-Web-Black.eot');
+	src: url('../fonts/Publico-Headline-Web-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Publico-Headline-Web-Black.woff') format('woff'),
+		url('../fonts/Publico-Headline-Web-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
 }

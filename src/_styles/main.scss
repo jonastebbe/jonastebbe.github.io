@@ -6,8 +6,8 @@ $text-color: black;
 $primary: #F1FAEE;
 $gray: #7C7A7A;
 
-$font-stack-heading: "Avenir Next", "Helvetica", sans-serif;
-$font-stack-body: "Avenir Next", "Helvetica", sans-serif;
+$font-stack-serif: "Publico", "Georgia", "Times", "Times New Roman", serif;
+$font-stack-sans: "Avenir Next", "Helvetica", sans-serif;
 
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
@@ -23,7 +23,7 @@ $font-stack-body: "Avenir Next", "Helvetica", sans-serif;
 
 html, body, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
-    font-family: $font-stack-body !important;
+    font-family: $font-stack-sans !important;
 }
 
 html {
@@ -77,7 +77,7 @@ body {
         @extend .pure-u-md-1-12;
         position: relative;
         p {
-            font-family: $font-stack-heading;
+            font-family: $font-stack-sans;
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -110,7 +110,7 @@ body {
         @extend .pure-u-5-6;
         @extend .pure-u-md-5-6;
         p {
-            font-family: $font-stack-heading;
+            font-family: $font-stack-serif;
             font-size: 35px;
             line-height: 1.5;
             font-weight: 700;
@@ -139,7 +139,7 @@ body {
 }
 
 .social-icon {
-    font-family: $font-stack-body !important;
+    font-family: $font-stack-sans !important;
     margin-right: 20px;
     display: inline-block;
     vertical-align: middle;
@@ -190,7 +190,7 @@ body {
     text-align: center;
     padding: 25px;
     a {
-        font-family: $font-stack-heading;
+        font-family: $font-stack-sans;
         font-size: 14px;
         line-height: 1.5;
         font-weight: 700;
@@ -220,7 +220,7 @@ body {
         @extend .pure-u-1-1;
         margin-top: 50px;
         h1 {
-            font-family: $font-stack-heading;
+            font-family: $font-stack-sans;
             font-weight: 700;
             letter-spacing: 0.3em;
             margin: 0;
@@ -230,7 +230,7 @@ body {
         }
         h2 {
             color: $gray;
-            font-family: $font-stack-heading;
+            font-family: $font-stack-sans;
             font-weight: 500;
             font-style: italic;
             font-size: 18px;
