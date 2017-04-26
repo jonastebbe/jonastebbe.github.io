@@ -2975,16 +2975,6 @@ body {
   }
 }
 
-.b-lazy {
-  opacity: 0;
-  -webkit-transition: opacity 1000ms;
-          transition: opacity 1000ms;
-}
-
-.b-loaded {
-  opacity: 1;
-}
-
 .section__label {
   position: relative;
 }
