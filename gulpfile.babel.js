@@ -36,6 +36,7 @@ gulp.task('default', ['clean'], () => {
 // Build production-ready code
 gulp.task('build', [
   'copy',
+  'imageblur',
   'imagemin',
   'jade',
   'sass',
@@ -45,6 +46,7 @@ gulp.task('build', [
 // Server tasks with watch
 gulp.task('serve', [
   'imagemin',
+  'imageblur',
   'copy',
   'jade',
   'sass',
