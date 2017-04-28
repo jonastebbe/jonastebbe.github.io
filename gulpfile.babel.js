@@ -45,6 +45,7 @@ gulp.task('build', [
 
 // Server tasks with watch
 gulp.task('serve', [
+  'imageblur',
   'imagemin',
   'copy',
   'jade',

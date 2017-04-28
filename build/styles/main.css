@@ -1037,12 +1037,12 @@ this the same font stack that Normalize.css sets for the `body`.
 .header__links,
 .footer__logo,
 .footer__links,
-.music-grid__track,
 .album-grid__header,
 .album-grid__big-teaser,
 .album-grid__stacked-teaser,
 .album-grid .more-link,
 .pure-u-1-2,
+.music-grid__track,
 .photo-grid__photo,
 .album-grid__half-teaser__wrapper,
 .pure-u-1-3,
@@ -1173,7 +1173,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 45.8023%;
 }
 
-.pure-u-1-2, .photo-grid__photo, .album-grid__half-teaser__wrapper,
+.pure-u-1-2, .music-grid__track, .photo-grid__photo, .album-grid__half-teaser__wrapper,
 .pure-u-12-24 {
   width: 50%;
   *width: 49.9690%;
@@ -1257,7 +1257,6 @@ this the same font stack that Normalize.css sets for the `body`.
 .header__links,
 .footer__logo,
 .footer__links,
-.music-grid__track,
 .album-grid__header,
 .album-grid__big-teaser,
 .album-grid__stacked-teaser,
@@ -2259,7 +2258,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 @media screen and (min-width: 48em) {
   .pure-u-md-1,
   .pure-u-md-1-1,
-  .music-grid__track,
   .pure-u-md-1-2,
   .header__logo,
   .header__links,
@@ -2271,6 +2269,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-md-2-3,
   .album-grid__big-teaser,
   .pure-u-md-1-4,
+  .music-grid__track,
   .pure-u-md-3-4,
   .pure-u-md-1-5,
   .pure-u-md-2-5,
@@ -2348,7 +2347,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 20.8333%;
     *width: 20.8023%;
   }
-  .pure-u-md-1-4,
+  .pure-u-md-1-4, .music-grid__track,
   .pure-u-md-6-24 {
     width: 25%;
     *width: 24.9690%;
@@ -2446,7 +2445,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
   .pure-u-md-1,
   .pure-u-md-1-1,
-  .music-grid__track,
   .pure-u-md-5-5,
   .pure-u-md-24-24 {
     width: 100%;
@@ -3094,6 +3092,10 @@ a.text-link:hover::after, a.text-link:focus::after {
   text-align: center;
 }
 
+.section__content--secondary p {
+  background-color: #EDF7FF;
+}
+
 .social-icon {
   font-family: "Avenir Next", "Helvetica", sans-serif !important;
   margin-right: 20px;
@@ -3122,6 +3124,28 @@ a.text-link:hover::after, a.text-link:focus::after {
 
 .music-grid__track {
   padding: 10px 0px;
+}
+
+.music-grid__track__wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.music-grid__track__wrapper img {
+  width: 100%;
+}
+
+.music-grid__track:first-child > .music-grid__track__wrapper {
+  padding-right: 10px;
+}
+
+.music-grid__track:not(:first-child):not(:last-child) > .music-grid__track__wrapper {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.music-grid__track:last-child > .music-grid__track__wrapper {
+  padding-left: 10px;
 }
 
 .photo-grid__photo__wrapper {

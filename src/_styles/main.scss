@@ -5,6 +5,7 @@
 $text-color: black;
 $primary: #F1FAEE;
 $gray: #7C7A7A;
+$secondary: #EDF7FF;
 
 $font-stack-serif: "Publico", "Georgia", "Times", "Times New Roman", serif;
 $font-stack-sans: "Avenir Next", "Helvetica", sans-serif;
@@ -174,6 +175,11 @@ a.text-link {
     &__content--centered {
         text-align: center;
     }
+    &__content--secondary {
+        p {
+            background-color: $secondary;
+        }
+    }
 }
 
 .social-icon {
@@ -197,9 +203,26 @@ a.text-link {
     @extend .pure-g;
     padding: 50px 0px;
     &__track {
-        @extend .pure-u-1-1;
-        @extend .pure-u-md-1-1;
+        @extend .pure-u-1-2;
+        @extend .pure-u-md-1-4;
         padding: 10px 0px;
+        &__wrapper {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__track:first-child > .music-grid__track__wrapper {
+        padding-right: 10px;
+    }
+    &__track:not(:first-child):not(:last-child) > .music-grid__track__wrapper {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &__track:last-child > .music-grid__track__wrapper {
+        padding-left: 10px;
     }
 }
 
