@@ -35,6 +35,47 @@ body {
     height: 100%;
     width: 100%;
 }
+ 
+a.text-link {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        height: 3px;
+    }
+
+    &::before {
+        width: 0%;
+        left: 0;
+        bottom: 0;
+        transition: width ease 0.4s;
+    }
+
+    &::after {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transition: all ease 0.6s;
+    }
+
+    &:hover::before, &:focus::before {
+        width: 100%;
+    }
+
+    &:hover::after, &:focus::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+    }
+}
 
 .wrapper {
   margin-right: auto;

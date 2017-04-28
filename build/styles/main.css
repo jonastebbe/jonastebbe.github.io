@@ -2945,6 +2945,51 @@ body {
   width: 100%;
 }
 
+a.text-link {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 1px;
+  -webkit-transition: color ease 0.3s;
+          transition: color ease 0.3s;
+}
+
+a.text-link::before, a.text-link::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  height: 3px;
+}
+
+a.text-link::before {
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: width ease 0.4s;
+          transition: width ease 0.4s;
+}
+
+a.text-link::after {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all ease 0.6s;
+          transition: all ease 0.6s;
+}
+
+a.text-link:hover::before, a.text-link:focus::before {
+  width: 100%;
+}
+
+a.text-link:hover::after, a.text-link:focus::after {
+  left: 100%;
+  width: 0%;
+  -webkit-transition: all ease 0.2s;
+          transition: all ease 0.2s;
+}
+
 .wrapper {
   margin-right: auto;
   margin-left: auto;
