@@ -14,7 +14,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       '-thumb': {
             blur: 20,
             quality: 40
-        }
+      }
     })).pipe(gulp.dest(dest));
 });
 }
