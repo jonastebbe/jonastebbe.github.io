@@ -950,7 +950,7 @@ th {
 }
 
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g, .header, .footer, .section, .music-grid, .photo-grid, .album-grid, .album-grid__half-teaser, .album-grid__third-teaser, .photo-stream {
+.pure-g, .header, .footer, .section, .music-grid, .photo-grid, .album-grid, .album-grid__half-teaser, .album-grid__third-teaser, .photo-stream, .project-grid {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -989,7 +989,7 @@ th {
 
 /* IE10 display: -ms-flexbox (and display: flex in IE 11) does not work inside a table; fall back to block and rely on font hack */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  table .pure-g, table .header, table .footer, table .section, table .music-grid, table .photo-grid, table .album-grid, table .album-grid__half-teaser, table .album-grid__third-teaser, table .photo-stream {
+  table .pure-g, table .header, table .footer, table .section, table .music-grid, table .photo-grid, table .album-grid, table .album-grid__half-teaser, table .album-grid__third-teaser, table .photo-stream, table .project-grid {
     display: block;
   }
 }
@@ -1008,7 +1008,8 @@ th {
 .album-grid,
 .album-grid__half-teaser,
 .album-grid__third-teaser,
-.photo-stream {
+.photo-stream,
+.project-grid {
   word-spacing: -0.43em;
 }
 
@@ -1027,7 +1028,7 @@ th {
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .music-grid [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .music-grid [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"], .project-grid [class*="pure-u"] {
   font-family: sans-serif;
 }
 
@@ -1041,10 +1042,12 @@ this the same font stack that Normalize.css sets for the `body`.
 .album-grid__big-teaser,
 .album-grid__stacked-teaser,
 .album-grid .more-link,
+.project-grid__header,
 .pure-u-1-2,
 .music-grid__track,
 .photo-grid__photo,
 .album-grid__half-teaser__wrapper,
+.project-grid__project,
 .pure-u-1-3,
 .album-grid__third-teaser__wrapper,
 .pure-u-2-3,
@@ -1173,7 +1176,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 45.8023%;
 }
 
-.pure-u-1-2, .music-grid__track, .photo-grid__photo, .album-grid__half-teaser__wrapper,
+.pure-u-1-2, .music-grid__track, .photo-grid__photo, .album-grid__half-teaser__wrapper, .project-grid__project,
 .pure-u-12-24 {
   width: 50%;
   *width: 49.9690%;
@@ -1261,6 +1264,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .album-grid__big-teaser,
 .album-grid__stacked-teaser,
 .album-grid .more-link,
+.project-grid__header,
 .pure-u-5-5,
 .pure-u-24-24 {
   width: 100%;
@@ -2929,7 +2933,7 @@ a:active {
 }
 
 html, body, button, input, select, textarea,
-.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .music-grid [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"] {
+.pure-g [class*="pure-u"], .header [class*="pure-u"], .footer [class*="pure-u"], .section [class*="pure-u"], .music-grid [class*="pure-u"], .photo-grid [class*="pure-u"], .album-grid [class*="pure-u"], .album-grid__half-teaser [class*="pure-u"], .album-grid__third-teaser [class*="pure-u"], .photo-stream [class*="pure-u"], .project-grid [class*="pure-u"] {
   font-family: "Avenir Next", "Helvetica", sans-serif !important;
 }
 
@@ -3401,6 +3405,77 @@ a.text-link:hover::after, a.text-link:focus::after {
     width: 100%;
     margin-left: 0%;
   }
+}
+
+.project-grid {
+  margin-bottom: 20px;
+}
+
+.project-grid__header {
+  margin-top: 50px;
+}
+
+.project-grid__header h1 {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  display: inline-block;
+}
+
+.project-grid__header h2 {
+  color: #7C7A7A;
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  margin: 0;
+  letter-spacing: normal;
+  display: inline-block;
+}
+
+.project-grid__project {
+  border-top: 2em solid rgba(230, 230, 230, 0.7);
+  -webkit-box-shadow: 0 0.2em 2em 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.2em 2em 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 3px 3px 0 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-grid__project::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.25em;
+  left: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #f44;
+  -webkit-box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+          box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+}
+
+.project-grid__project::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.6em;
+  left: 5.5em;
+  width: -webkit-calc(100% - 6em);
+  width: calc(100% - 6em);
+  height: 1.2em;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.project-grid__project img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

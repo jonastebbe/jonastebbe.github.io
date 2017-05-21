@@ -1,0 +1,25 @@
+extends ../_layouts/base
+
+include ../_modules/header/header
+include ../_modules/footer/footer
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    div.wrapper
+
+        +header(baseUrl)
+
+        div.section
+            div.project-grid
+                div.project-grid__header
+                    h1 owlhub.
+                    h2 website & native app
+                div.project-grid__project
+                    img(src="http://placehold.it/1024x768/f1faee/000")
+                div.project-grid__project
+                    img(src="http://placehold.it/1024x768/f1faee/000")
+
+        +footer(baseUrl)

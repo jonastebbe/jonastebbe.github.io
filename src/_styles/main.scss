@@ -458,3 +458,71 @@ a.text-link {
         }
     }
 }
+
+.project-grid {
+    @extend .pure-g;
+    &__header {
+        @extend .pure-u-1-1;
+        margin-top: 50px;
+        h1 {
+            font-family: $font-stack-sans;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: normal;
+            display: inline-block;
+        }
+        h2 {
+            color: $gray;
+            font-family: $font-stack-sans;
+            font-weight: 500;
+            font-style: italic;
+            font-size: 18px;
+            letter-spacing: 0.3em;
+            margin: 0;
+            letter-spacing: normal;
+            display: inline-block;
+        }
+    }
+
+    &__project {
+        @extend .pure-u-1-2;
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        box-shadow: 0 0.2em 2em 0 rgba(0, 0, 0, 0.1);
+        position: relative;
+        border-radius: 3px 3px 0 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: '';
+            top: -1.25em;
+            left: 1em;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 50%;
+            background-color: #f44;
+            box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: -1.6em;
+            left: 5.5em;
+            width: calc(100% - 6em);
+            height: 1.2em;
+            border-radius: 2px;
+            background-color: white;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    margin-bottom: 20px;
+}
