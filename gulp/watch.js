@@ -30,7 +30,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       // Images
       gulp.watch([
         path.join(dirs.source, dirs.images, '**/*.{jpg,jpeg,gif,svg,png}')
-      ], ['imagemin']);
+      ], ['imageblur']);
 
       // All other files
       gulp.watch([

@@ -21,7 +21,7 @@
     "glob": "~5.0.10",
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "^3.0.2",
-    "gulp-changed": "~1.2.1",
+    "gulp-changed": "^1.2.1",
     "gulp-data": "~1.2.0",
     "gulp-eslint": "~0.14.0",
     "gulp-htmlmin": "~1.1.3",
