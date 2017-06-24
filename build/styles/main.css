@@ -3344,8 +3344,15 @@ a.text-link:hover::after, a.text-link:focus::after {
 }
 
 .project-grid {
-  margin-top: 70px;
-  margin-bottom: 20px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .project-grid {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .project-grid__meta h1 {
@@ -3360,17 +3367,39 @@ a.text-link:hover::after, a.text-link:focus::after {
 
 .project-grid__meta p {
   font-family: "Publico", "Georgia", "Times", "Times New Roman", serif;
+  line-height: 1.5;
   color: #7C7A7A;
 }
 
+@media screen and (max-width: 35.5em) {
+  .project-grid__meta {
+    margin-top: 50px;
+  }
+}
+
 .project-grid__mockup {
-  -webkit-box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  text-align: center;
 }
 
 .project-grid__mockup img {
-  width: 80%;
+  width: 70%;
+  -webkit-box-shadow: 0 1.5em 3em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.5em 3em 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 35.5em) {
+  .project-grid__mockup {
+    text-align: center;
+  }
+  .project-grid__mockup img {
+    width: 100%;
+  }
+}
+
+.project-grid__mockup--no-shadow img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 html, body, button, input, select, textarea,
