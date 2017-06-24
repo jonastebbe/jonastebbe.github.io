@@ -2269,12 +2269,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .footer__logo,
   .footer__links,
   .photo-grid__photo,
+  .project-grid__meta,
+  .project-grid__mockup,
   .pure-u-md-1-3,
   .album-grid__stacked-teaser,
-  .project-grid__meta,
   .pure-u-md-2-3,
   .album-grid__big-teaser,
-  .project-grid__mockup,
   .pure-u-md-1-4,
   .music-grid__track,
   .pure-u-md-3-4,
@@ -2363,7 +2363,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 29.1667%;
     *width: 29.1357%;
   }
-  .pure-u-md-1-3, .album-grid__stacked-teaser, .project-grid__meta,
+  .pure-u-md-1-3, .album-grid__stacked-teaser,
   .pure-u-md-8-24 {
     width: 33.3333%;
     *width: 33.3023%;
@@ -2386,7 +2386,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 45.8333%;
     *width: 45.8023%;
   }
-  .pure-u-md-1-2, .header__logo, .header__links, .footer__logo, .footer__links, .photo-grid__photo,
+  .pure-u-md-1-2, .header__logo, .header__links, .footer__logo, .footer__links, .photo-grid__photo, .project-grid__meta, .project-grid__mockup,
   .pure-u-md-12-24 {
     width: 50%;
     *width: 49.9690%;
@@ -2409,7 +2409,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 62.5000%;
     *width: 62.4690%;
   }
-  .pure-u-md-2-3, .album-grid__big-teaser, .project-grid__mockup,
+  .pure-u-md-2-3, .album-grid__big-teaser,
   .pure-u-md-16-24 {
     width: 66.6667%;
     *width: 66.6357%;
@@ -2463,7 +2463,9 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-lg-1-1,
   .pure-u-lg-1-2,
   .pure-u-lg-1-3,
+  .project-grid__meta,
   .pure-u-lg-2-3,
+  .project-grid__mockup,
   .pure-u-lg-1-4,
   .pure-u-lg-3-4,
   .pure-u-lg-1-5,
@@ -2549,7 +2551,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 29.1667%;
     *width: 29.1357%;
   }
-  .pure-u-lg-1-3,
+  .pure-u-lg-1-3, .project-grid__meta,
   .pure-u-lg-8-24 {
     width: 33.3333%;
     *width: 33.3023%;
@@ -2595,7 +2597,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 62.5000%;
     *width: 62.4690%;
   }
-  .pure-u-lg-2-3,
+  .pure-u-lg-2-3, .project-grid__mockup,
   .pure-u-lg-16-24 {
     width: 66.6667%;
     *width: 66.6357%;
@@ -3058,6 +3060,17 @@ a.text-link:hover::after, a.text-link:focus::after {
           transition: all ease 0.2s;
 }
 
+@media screen and (max-width: 35.5em) {
+  a.text-link::before, a.text-link::after {
+    height: 2px;
+  }
+}
+
+a.text-link--small::before, a.text-link--small::after {
+  content: '';
+  height: 2px;
+}
+
 .music-grid {
   padding: 50px 0px;
 }
@@ -3348,7 +3361,7 @@ a.text-link:hover::after, a.text-link:focus::after {
   margin-bottom: 150px;
 }
 
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 48em) {
   .project-grid {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -3379,12 +3392,23 @@ a.text-link:hover::after, a.text-link:focus::after {
 
 .project-grid__mockup {
   text-align: center;
+  position: relative;
 }
 
-.project-grid__mockup img {
+.project-grid__mockup img.desktop {
   width: 70%;
-  -webkit-box-shadow: 0 1.5em 3em 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1.5em 3em 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.project-grid__mockup img.mobile {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 20%;
+  -webkit-box-shadow: 0 2em 3em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2em 3em 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -3392,12 +3416,33 @@ a.text-link:hover::after, a.text-link:focus::after {
   .project-grid__mockup {
     text-align: center;
   }
-  .project-grid__mockup img {
-    width: 100%;
+  .project-grid__mockup img.desktop {
+    width: 80%;
+    border-radius: 2px;
+  }
+  .project-grid__mockup img.mobile {
+    bottom: 0;
+    left: 20px;
+    border-radius: 2px;
   }
 }
 
-.project-grid__mockup--no-shadow img {
+@media screen and (max-width: 48em) {
+  .project-grid__mockup {
+    text-align: center;
+  }
+  .project-grid__mockup img.desktop {
+    width: 80%;
+    border-radius: 2px;
+  }
+  .project-grid__mockup img.mobile {
+    bottom: 0;
+    top: 20px;
+    border-radius: 2px;
+  }
+}
+
+.project-grid__mockup--no-shadow img.desktop {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -3424,8 +3469,8 @@ body {
 
 @media (max-width: 768px) {
   .wrapper {
-    width: -webkit-calc(100% - 20px);
-    width: calc(100% - 20px);
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
   }
 }
 

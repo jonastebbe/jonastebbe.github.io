@@ -110,6 +110,19 @@ a.text-link {
         width: 0%;
         transition: all ease 0.2s;
     }
+
+    @media screen and (max-width: 35.5em) {
+        &::before, &::after {
+            height: 2px;
+        }
+    }
+}
+
+a.text-link--small {
+    &::before, &::after {
+        content: '';
+        height: 2px;
+    }
 }
 
 .music-grid {
