@@ -8,193 +8,187 @@ block config
   - var baseUrl = '../'
 
 block content
-    div.wrapper
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Frankfurt
+                h2 '17
+            div.album-grid__big-teaser
+                div.album-grid__big-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-may-15.jpg" src="#{baseUrl}images/photos/ffm-may-15-thumb.jpg" class="b-lazy")
+            div.album-grid__stacked-teaser
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-may-10.jpg" src="#{baseUrl}images/photos/ffm-may-10-thumb.jpg" class="b-lazy")
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-may-25.jpg" src="#{baseUrl}images/photos/ffm-may-25-thumb.jpg" class="b-lazy") 
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-may-3.jpg" src="#{baseUrl}images/photos/ffm-may-3-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-may-4.jpg" src="#{baseUrl}images/photos/ffm-may-4-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-may-20.jpg" src="#{baseUrl}images/photos/ffm-may-20-thumb.jpg" class="b-lazy")
+            div.more-link #[a(href="/photo/ffm") more photos]
 
-        +header(baseUrl)
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Rheingau
+                h2 '17
+            div.album-grid__big-teaser
+                div.album-grid__big-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/rheingau-24.jpg" src="#{baseUrl}images/photos/rheingau-24-thumb.jpg" class="b-lazy")
+            div.album-grid__stacked-teaser
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/rheingau-14.jpg" src="#{baseUrl}images/photos/rheingau-14-thumb.jpg" class="b-lazy")
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/rheingau-15.jpg" src="#{baseUrl}images/photos/rheingau-15-thumb.jpg" class="b-lazy")
+            div.album-grid__half-teaser
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/rheingau-31.jpg" src="#{baseUrl}images/photos/rheingau-31-thumb.jpg" class="b-lazy")
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/rheingau-27.jpg" src="#{baseUrl}images/photos/rheingau-27-thumb.jpg" class="b-lazy")
+            div.more-link #[a(href="/photo/rheingau") more photos]
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Frankfurt
-                    h2 '17
-                div.album-grid__big-teaser
-                    div.album-grid__big-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-may-15.jpg" src="#{baseUrl}images/photos/ffm-may-15-thumb.jpg" class="b-lazy")
-                div.album-grid__stacked-teaser
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-may-10.jpg" src="#{baseUrl}images/photos/ffm-may-10-thumb.jpg" class="b-lazy")
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-may-25.jpg" src="#{baseUrl}images/photos/ffm-may-25-thumb.jpg" class="b-lazy") 
-                div.album-grid__third-teaser
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-may-3.jpg" src="#{baseUrl}images/photos/ffm-may-3-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-may-4.jpg" src="#{baseUrl}images/photos/ffm-may-4-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-may-20.jpg" src="#{baseUrl}images/photos/ffm-may-20-thumb.jpg" class="b-lazy")
-                div.more-link #[a(href="/photo/ffm") more photos]
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 St. Peter Ording
+                h2 '17
+            div.album-grid__half-teaser
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/spo-1.jpg" src="#{baseUrl}images/photos/spo-1-thumb.jpg" class="b-lazy")
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/spo-2.jpg" src="#{baseUrl}images/photos/spo-2-thumb.jpg" class="b-lazy")
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/spo-6.jpg" src="#{baseUrl}images/photos/spo-6-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/spo-7.jpg" src="#{baseUrl}images/photos/spo-7-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/spo-9.jpg" src="#{baseUrl}images/photos/spo-9-thumb.jpg" class="b-lazy")
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Rheingau
-                    h2 '17
-                div.album-grid__big-teaser
-                    div.album-grid__big-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/rheingau-24.jpg" src="#{baseUrl}images/photos/rheingau-24-thumb.jpg" class="b-lazy")
-                div.album-grid__stacked-teaser
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/rheingau-14.jpg" src="#{baseUrl}images/photos/rheingau-14-thumb.jpg" class="b-lazy")
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/rheingau-15.jpg" src="#{baseUrl}images/photos/rheingau-15-thumb.jpg" class="b-lazy")
-                div.album-grid__half-teaser
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/rheingau-31.jpg" src="#{baseUrl}images/photos/rheingau-31-thumb.jpg" class="b-lazy")
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/rheingau-27.jpg" src="#{baseUrl}images/photos/rheingau-27-thumb.jpg" class="b-lazy")
-                div.more-link #[a(href="/photo/rheingau") more photos]
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Hamburg
+                h2 '17
+            div.album-grid__big-teaser
+                div.album-grid__big-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/hamburg-5.jpg" src="#{baseUrl}images/photos/hamburg-5-thumb.jpg" class="b-lazy")
+            div.album-grid__stacked-teaser
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/hamburg-4.jpg" src="#{baseUrl}images/photos/hamburg-4-thumb.jpg" class="b-lazy")
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/hamburg-7.jpg" src="#{baseUrl}images/photos/hamburg-7-thumb.jpg" class="b-lazy")     
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 St. Peter Ording
-                    h2 '17
-                div.album-grid__half-teaser
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/spo-1.jpg" src="#{baseUrl}images/photos/spo-1-thumb.jpg" class="b-lazy")
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/spo-2.jpg" src="#{baseUrl}images/photos/spo-2-thumb.jpg" class="b-lazy")
-                div.album-grid__third-teaser
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/spo-6.jpg" src="#{baseUrl}images/photos/spo-6-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/spo-7.jpg" src="#{baseUrl}images/photos/spo-7-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/spo-9.jpg" src="#{baseUrl}images/photos/spo-9-thumb.jpg" class="b-lazy")
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Berlin
+                h2 '17
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/berlin-5.jpg" src="#{baseUrl}images/photos/berlin-5-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/berlin-6.jpg" src="#{baseUrl}images/photos/berlin-6-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/berlin-7.jpg" src="#{baseUrl}images/photos/berlin-7-thumb.jpg" class="b-lazy")
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Hamburg
-                    h2 '17
-                div.album-grid__big-teaser
-                    div.album-grid__big-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/hamburg-5.jpg" src="#{baseUrl}images/photos/hamburg-5-thumb.jpg" class="b-lazy")
-                div.album-grid__stacked-teaser
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/hamburg-4.jpg" src="#{baseUrl}images/photos/hamburg-4-thumb.jpg" class="b-lazy")
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/hamburg-7.jpg" src="#{baseUrl}images/photos/hamburg-7-thumb.jpg" class="b-lazy")     
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Frankfurt
+                h2 '17
+            div.album-grid__big-teaser
+                div.album-grid__big-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-1.jpg" src="#{baseUrl}images/photos/ffm-1-thumb.jpg" class="b-lazy")
+            div.album-grid__stacked-teaser
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-2.jpg" src="#{baseUrl}images/photos/ffm-2-thumb.jpg" class="b-lazy")
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-3.jpg" src="#{baseUrl}images/photos/ffm-3-thumb.jpg" class="b-lazy")
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-4.jpg" src="#{baseUrl}images/photos/ffm-4-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-5.jpg" src="#{baseUrl}images/photos/ffm-5-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/ffm-6.jpg" src="#{baseUrl}images/photos/ffm-6-thumb.jpg" class="b-lazy")
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Berlin
-                    h2 '17
-                div.album-grid__third-teaser
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/berlin-5.jpg" src="#{baseUrl}images/photos/berlin-5-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/berlin-6.jpg" src="#{baseUrl}images/photos/berlin-6-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/berlin-7.jpg" src="#{baseUrl}images/photos/berlin-7-thumb.jpg" class="b-lazy")
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Bavaria
+                h2 '16
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/bavaria-4.jpg" src="#{baseUrl}images/photos/bavaria-4-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/bavaria-24.jpg" src="#{baseUrl}images/photos/bavaria-11-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/bavaria-18.jpg" src="#{baseUrl}images/photos/bavaria-18-thumb.jpg" class="b-lazy")
+            div.album-grid__half-teaser
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/bavaria-1.jpg" src="#{baseUrl}images/photos/bavaria-1-thumb.jpg" class="b-lazy")
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/bavaria-3.jpg" src="#{baseUrl}images/photos/bavaria-3-thumb.jpg" class="b-lazy")
+            div.more-link #[a(href="/photo/bavaria") more photos]
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Frankfurt
-                    h2 '17
-                div.album-grid__big-teaser
-                    div.album-grid__big-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-1.jpg" src="#{baseUrl}images/photos/ffm-1-thumb.jpg" class="b-lazy")
-                div.album-grid__stacked-teaser
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-2.jpg" src="#{baseUrl}images/photos/ffm-2-thumb.jpg" class="b-lazy")
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-3.jpg" src="#{baseUrl}images/photos/ffm-3-thumb.jpg" class="b-lazy")
-                div.album-grid__third-teaser
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-4.jpg" src="#{baseUrl}images/photos/ffm-4-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-5.jpg" src="#{baseUrl}images/photos/ffm-5-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/ffm-6.jpg" src="#{baseUrl}images/photos/ffm-6-thumb.jpg" class="b-lazy")
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Prague
+                h2 '16
+            div.album-grid__big-teaser
+                div.album-grid__big-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/prague-1.jpg" src="#{baseUrl}images/photos/prague-1-thumb.jpg" class="b-lazy")
+            div.album-grid__stacked-teaser
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/prague-2.jpg" src="#{baseUrl}images/photos/prague-2-thumb.jpg" class="b-lazy")
+                div.album-grid__stacked-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/prague-3.jpg" src="#{baseUrl}images/photos/prague-3-thumb.jpg" class="b-lazy")
+            div.album-grid__half-teaser
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/prague-4.jpg" src="#{baseUrl}images/photos/prague-4-thumb.jpg" class="b-lazy")
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/prague-5.jpg" src="#{baseUrl}images/photos/prague-5-thumb.jpg" class="b-lazy")
+            div.more-link #[a(href="/photo/prague") more photos]
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Bavaria
-                    h2 '16
-                div.album-grid__third-teaser
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/bavaria-4.jpg" src="#{baseUrl}images/photos/bavaria-4-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/bavaria-24.jpg" src="#{baseUrl}images/photos/bavaria-11-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/bavaria-18.jpg" src="#{baseUrl}images/photos/bavaria-18-thumb.jpg" class="b-lazy")
-                div.album-grid__half-teaser
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/bavaria-1.jpg" src="#{baseUrl}images/photos/bavaria-1-thumb.jpg" class="b-lazy")
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/bavaria-3.jpg" src="#{baseUrl}images/photos/bavaria-3-thumb.jpg" class="b-lazy")
-                div.more-link #[a(href="/photo/bavaria") more photos]
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Berlin
+                h2 '16
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/berlin-1.jpg" src="#{baseUrl}images/photos/berlin-1-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/berlin-2.jpg" src="#{baseUrl}images/photos/berlin-2-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/berlin-3.jpg" src="#{baseUrl}images/photos/berlin-3-thumb.jpg" class="b-lazy")
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Prague
-                    h2 '16
-                div.album-grid__big-teaser
-                    div.album-grid__big-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/prague-1.jpg" src="#{baseUrl}images/photos/prague-1-thumb.jpg" class="b-lazy")
-                div.album-grid__stacked-teaser
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/prague-2.jpg" src="#{baseUrl}images/photos/prague-2-thumb.jpg" class="b-lazy")
-                    div.album-grid__stacked-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/prague-3.jpg" src="#{baseUrl}images/photos/prague-3-thumb.jpg" class="b-lazy")
-                div.album-grid__half-teaser
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/prague-4.jpg" src="#{baseUrl}images/photos/prague-4-thumb.jpg" class="b-lazy")
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/prague-5.jpg" src="#{baseUrl}images/photos/prague-5-thumb.jpg" class="b-lazy")
-                div.more-link #[a(href="/photo/prague") more photos]
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Hamburg
+                h2 '16
+            div.album-grid__half-teaser
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/hamburg-1.jpg" src="#{baseUrl}images/photos/hamburg-1-thumb.jpg" class="b-lazy")
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/hamburg-2.jpg" src="#{baseUrl}images/photos/hamburg-2-thumb.jpg" class="b-lazy")
 
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Berlin
-                    h2 '16
-                div.album-grid__third-teaser
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/berlin-1.jpg" src="#{baseUrl}images/photos/berlin-1-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/berlin-2.jpg" src="#{baseUrl}images/photos/berlin-2-thumb.jpg" class="b-lazy")
-                    div.album-grid__third-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/berlin-3.jpg" src="#{baseUrl}images/photos/berlin-3-thumb.jpg" class="b-lazy")
-
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 Hamburg
-                    h2 '16
-                div.album-grid__half-teaser
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/hamburg-1.jpg" src="#{baseUrl}images/photos/hamburg-1-thumb.jpg" class="b-lazy")
-                    div.album-grid__half-teaser__wrapper
-                        img(data-src="#{baseUrl}images/photos/hamburg-2.jpg" src="#{baseUrl}images/photos/hamburg-2-thumb.jpg" class="b-lazy")
-
-        div.section
-            div.album-grid
-                div.album-grid__header
-                    h1 USA
-                    h2 '14
-                div.album-grid__stacked-teaser.album-grid__stacked-teaser--inverted
-                    div.album-grid__stacked-teaser__wrapper.album-grid__stacked-teaser__wrapper--inverted
-                        img(data-src="#{baseUrl}images/photos/usa-2.jpg" src="#{baseUrl}images/photos/usa-2-thumb.jpg" class="b-lazy")
-                    div.album-grid__stacked-teaser__wrapper.album-grid__stacked-teaser__wrapper--inverted
-                        img(data-src="#{baseUrl}images/photos/usa-3.jpg" src="#{baseUrl}images/photos/usa-3-thumb.jpg" class="b-lazy")
-                div.album-grid__big-teaser
-                    div.album-grid__big-teaser__wrapper.album-grid__big-teaser__wrapper--inverted
-                        img(data-src="#{baseUrl}images/photos/usa-1.jpg" src="#{baseUrl}images/photos/usa-1-thumb.jpg" class="b-lazy")
-
-        +footer(baseUrl)
+    div.section
+        div.album-grid
+            div.album-grid__header
+                h1 USA
+                h2 '14
+            div.album-grid__stacked-teaser.album-grid__stacked-teaser--inverted
+                div.album-grid__stacked-teaser__wrapper.album-grid__stacked-teaser__wrapper--inverted
+                    img(data-src="#{baseUrl}images/photos/usa-2.jpg" src="#{baseUrl}images/photos/usa-2-thumb.jpg" class="b-lazy")
+                div.album-grid__stacked-teaser__wrapper.album-grid__stacked-teaser__wrapper--inverted
+                    img(data-src="#{baseUrl}images/photos/usa-3.jpg" src="#{baseUrl}images/photos/usa-3-thumb.jpg" class="b-lazy")
+            div.album-grid__big-teaser
+                div.album-grid__big-teaser__wrapper.album-grid__big-teaser__wrapper--inverted
+                    img(data-src="#{baseUrl}images/photos/usa-1.jpg" src="#{baseUrl}images/photos/usa-1-thumb.jpg" class="b-lazy")

@@ -1,3 +1,6 @@
+include ../_modules/header/header
+include ../_modules/footer/footer
+
 //- Custom Configuration
 block config
   //- Setup site's base URL to match the "baseUrl" key within `package.json`
@@ -50,7 +53,12 @@ body
   <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  block content
+  div.wrapper
+    +header
+    div#barba-wrapper
+      div.barba-container
+        block content
+    +footer
 
   block scripts
     script(src= baseUrl + 'scripts/main.js')

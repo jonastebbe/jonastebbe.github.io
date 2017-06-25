@@ -2864,7 +2864,6 @@ a:active {
 }
 
 .header__logo a h1 {
-  border-left: 3px solid black;
   display: inline-block;
   font-family: "Avenir Next", "Helvetica", sans-serif;
   font-weight: 700;

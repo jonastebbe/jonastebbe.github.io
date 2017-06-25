@@ -8,85 +8,80 @@ block config
   - var baseUrl = '../../'
 
 block content
-    div.wrapper
+    div.section
+        div.section__label
+            p About
+            span
+        div.section__content.section__content--centered
+            p
+                | Rheingau, Germany<br />
+                | May 2017
+            div.more-link.more-link--inline #[a(href="/photo") back to albums]
 
-        +header(baseUrl)
-
-        div.section
-            div.section__label
-                p About
-                span
-            div.section__content.section__content--centered
-                p
-                    | Rheingau, Germany<br />
-                    | May 2017
-                div.more-link.more-link--inline #[a(href="/photo") back to albums]
-
-        div.photo-stream
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-1.jpg" src="#{baseUrl}images/photos/rheingau-1-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-2.jpg" src="#{baseUrl}images/photos/rheingau-2-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-3.jpg" src="#{baseUrl}images/photos/rheingau-3-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-4.jpg" src="#{baseUrl}images/photos/rheingau-4-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-5.jpg" src="#{baseUrl}images/photos/rheingau-5-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-6.jpg" src="#{baseUrl}images/photos/rheingau-6-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-7.jpg" src="#{baseUrl}images/photos/rheingau-7-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-8.jpg" src="#{baseUrl}images/photos/rheingau-8-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-9.jpg" src="#{baseUrl}images/photos/rheingau-9-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-10.jpg" src="#{baseUrl}images/photos/rheingau-10-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-11.jpg" src="#{baseUrl}images/photos/rheingau-11-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-12.jpg" src="#{baseUrl}images/photos/rheingau-12-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-13.jpg" src="#{baseUrl}images/photos/rheingau-13-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-14.jpg" src="#{baseUrl}images/photos/rheingau-14-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-15.jpg" src="#{baseUrl}images/photos/rheingau-15-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-16.jpg" src="#{baseUrl}images/photos/rheingau-16-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-17.jpg" src="#{baseUrl}images/photos/rheingau-17-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-18.jpg" src="#{baseUrl}images/photos/rheingau-18-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-19.jpg" src="#{baseUrl}images/photos/rheingau-19-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-20.jpg" src="#{baseUrl}images/photos/rheingau-20-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-21.jpg" src="#{baseUrl}images/photos/rheingau-21-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-22.jpg" src="#{baseUrl}images/photos/rheingau-22-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-23.jpg" src="#{baseUrl}images/photos/rheingau-23-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-24.jpg" src="#{baseUrl}images/photos/rheingau-24-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-25.jpg" src="#{baseUrl}images/photos/rheingau-25-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-26.jpg" src="#{baseUrl}images/photos/rheingau-26-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-27.jpg" src="#{baseUrl}images/photos/rheingau-27-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-28.jpg" src="#{baseUrl}images/photos/rheingau-28-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-29.jpg" src="#{baseUrl}images/photos/rheingau-29-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-30.jpg" src="#{baseUrl}images/photos/rheingau-30-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-31.jpg" src="#{baseUrl}images/photos/rheingau-31-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-32.jpg" src="#{baseUrl}images/photos/rheingau-32-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/rheingau-33.jpg" src="#{baseUrl}images/photos/rheingau-33-thumb.jpg" class="b-lazy")
-        +footer(baseUrl)
+    div.photo-stream
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-1.jpg" src="#{baseUrl}images/photos/rheingau-1-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-2.jpg" src="#{baseUrl}images/photos/rheingau-2-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-3.jpg" src="#{baseUrl}images/photos/rheingau-3-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-4.jpg" src="#{baseUrl}images/photos/rheingau-4-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-5.jpg" src="#{baseUrl}images/photos/rheingau-5-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-6.jpg" src="#{baseUrl}images/photos/rheingau-6-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-7.jpg" src="#{baseUrl}images/photos/rheingau-7-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-8.jpg" src="#{baseUrl}images/photos/rheingau-8-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-9.jpg" src="#{baseUrl}images/photos/rheingau-9-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-10.jpg" src="#{baseUrl}images/photos/rheingau-10-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-11.jpg" src="#{baseUrl}images/photos/rheingau-11-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-12.jpg" src="#{baseUrl}images/photos/rheingau-12-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-13.jpg" src="#{baseUrl}images/photos/rheingau-13-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-14.jpg" src="#{baseUrl}images/photos/rheingau-14-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-15.jpg" src="#{baseUrl}images/photos/rheingau-15-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-16.jpg" src="#{baseUrl}images/photos/rheingau-16-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-17.jpg" src="#{baseUrl}images/photos/rheingau-17-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-18.jpg" src="#{baseUrl}images/photos/rheingau-18-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-19.jpg" src="#{baseUrl}images/photos/rheingau-19-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-20.jpg" src="#{baseUrl}images/photos/rheingau-20-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-21.jpg" src="#{baseUrl}images/photos/rheingau-21-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-22.jpg" src="#{baseUrl}images/photos/rheingau-22-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-23.jpg" src="#{baseUrl}images/photos/rheingau-23-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-24.jpg" src="#{baseUrl}images/photos/rheingau-24-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-25.jpg" src="#{baseUrl}images/photos/rheingau-25-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-26.jpg" src="#{baseUrl}images/photos/rheingau-26-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-27.jpg" src="#{baseUrl}images/photos/rheingau-27-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-28.jpg" src="#{baseUrl}images/photos/rheingau-28-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-29.jpg" src="#{baseUrl}images/photos/rheingau-29-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-30.jpg" src="#{baseUrl}images/photos/rheingau-30-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-31.jpg" src="#{baseUrl}images/photos/rheingau-31-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-32.jpg" src="#{baseUrl}images/photos/rheingau-32-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/rheingau-33.jpg" src="#{baseUrl}images/photos/rheingau-33-thumb.jpg" class="b-lazy")

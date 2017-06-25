@@ -8,48 +8,42 @@ block config
   - var baseUrl = '../../'
 
 block content
-    div.wrapper
+    div.section
+        div.section__label
+            p About
+            span
+        div.section__content.section__content--centered
+            p
+                | Prague, Czech Republic<br />
+                | April 2016
+            div.more-link.more-link--inline #[a(href="/photo") back to albums]
 
-        +header(baseUrl)
-
-        div.section
-            div.section__label
-                p About
-                span
-            div.section__content.section__content--centered
-                p
-                    | Prague, Czech Republic<br />
-                    | April 2016
-                div.more-link.more-link--inline #[a(href="/photo") back to albums]
-
-        div.photo-stream
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-1.jpg" src="#{baseUrl}images/photos/prague-1-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-2.jpg" src="#{baseUrl}images/photos/prague-2-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-3.jpg" src="#{baseUrl}images/photos/prague-3-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-4.jpg" src="#{baseUrl}images/photos/prague-4-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-5.jpg" src="#{baseUrl}images/photos/prague-5-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-6.jpg" src="#{baseUrl}images/photos/prague-6-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-7.jpg" src="#{baseUrl}images/photos/prague-7-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-8.jpg" src="#{baseUrl}images/photos/prague-8-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-9.jpg" src="#{baseUrl}images/photos/prague-9-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-10.jpg" src="#{baseUrl}images/photos/prague-10-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-11.jpg" src="#{baseUrl}images/photos/prague-11-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-12.jpg" src="#{baseUrl}images/photos/prague-12-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-13.jpg" src="#{baseUrl}images/photos/prague-13-thumb.jpg" class="b-lazy")
-            div.photo-stream__photo
-                img(data-src="#{baseUrl}images/photos/prague-14.jpg" src="#{baseUrl}images/photos/prague-14-thumb.jpg" class="b-lazy")
-
-        +footer(baseUrl)
+    div.photo-stream
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-1.jpg" src="#{baseUrl}images/photos/prague-1-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-2.jpg" src="#{baseUrl}images/photos/prague-2-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-3.jpg" src="#{baseUrl}images/photos/prague-3-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-4.jpg" src="#{baseUrl}images/photos/prague-4-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-5.jpg" src="#{baseUrl}images/photos/prague-5-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-6.jpg" src="#{baseUrl}images/photos/prague-6-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-7.jpg" src="#{baseUrl}images/photos/prague-7-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-8.jpg" src="#{baseUrl}images/photos/prague-8-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-9.jpg" src="#{baseUrl}images/photos/prague-9-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-10.jpg" src="#{baseUrl}images/photos/prague-10-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-11.jpg" src="#{baseUrl}images/photos/prague-11-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-12.jpg" src="#{baseUrl}images/photos/prague-12-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-13.jpg" src="#{baseUrl}images/photos/prague-13-thumb.jpg" class="b-lazy")
+        div.photo-stream__photo
+            img(data-src="#{baseUrl}images/photos/prague-14.jpg" src="#{baseUrl}images/photos/prague-14-thumb.jpg" class="b-lazy")
