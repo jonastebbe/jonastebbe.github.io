@@ -20,25 +20,25 @@ head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
   <!-- COMMON TAGS -->
-  title Jonas Tebbe
+  title #{siteTitle ? ('Jonas Tebbe | ' + siteTitle): 'Jonas Tebbe'}
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   <!-- Search Engine -->
-  meta(name='description', content= 'Hey, I’m Jonas and I create digital products.')
+  meta(name='description', content=siteDescription || 'Hey, I’m Jonas and I create digital products.')
   meta(name='image', content= 'http://jonastebbe.com/images/avatar.jpg')
   <!-- Schema.org for Google -->
-  meta(itemprop='name', content='Jonas Tebbe')
-  meta(itemprop='description', content='Hey, I’m Jonas and I create digital products.')
+  meta(itemprop='name', content=siteTitle ? ('Jonas Tebbe | ' + siteTitle): 'Jonas Tebbe')
+  meta(itemprop='description', content=siteDescription || 'Hey, I’m Jonas and I create digital products.')
   meta(itemprop='image', content='http://jonastebbe.com/images/avatar.jpg')
   <!-- Twitter -->
   meta(name='twitter:card', content='summary')
-  meta(name='twitter:title', content='Jonas Tebbe')
-  meta(name='twitter:description', content='Hey, I’m Jonas and I create digital products.')
+  meta(name='twitter:title', content=siteTitle ? ('Jonas Tebbe | ' + siteTitle): 'Jonas Tebbe')
+  meta(name='twitter:description', content=siteDescription || 'Hey, I’m Jonas and I create digital products.')
   meta(name='twitter:site', content='@jonastebbe')
   meta(name='twitter:creator', content='@jonastebbe')
   meta(name='twitter:image:src', content='http://jonastebbe.com/images/avatar.jpg')
   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  meta(name='og:title', content='Jonas Tebbe')
-  meta(name='og:description', content='Hey, I’m Jonas and I create digital products.')
+  meta(name='og:title', content=siteTitle ? ('Jonas Tebbe | ' + siteTitle): 'Jonas Tebbe')
+  meta(name='og:description', content=siteDescription || 'Hey, I’m Jonas and I create digital products.')
   meta(name='og:image', content='http://jonastebbe.com/images/avatar.jpg')
   meta(name='og:url', content='http://jonastebbe.com/')
   meta(name='og:site_name', content='Jonas Tebbe')
