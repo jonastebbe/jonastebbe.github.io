@@ -8,6 +8,7 @@ block config
   - var baseUrl = '../../'
   - var siteTitle = 'Frankfurt 2017'
   - var siteDescription = 'Photos from my Frankfurt trip in May 2017'
+  - var i = 1
 
 block content
     div.section
@@ -21,59 +22,6 @@ block content
             div.more-link.more-link--inline #[a(href="/photo") back to albums]
 
     div.photo-stream
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-1.jpg" src="#{baseUrl}images/photos/ffm-may-1-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-2.jpg" src="#{baseUrl}images/photos/ffm-may-2-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-3.jpg" src="#{baseUrl}images/photos/ffm-may-3-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-4.jpg" src="#{baseUrl}images/photos/ffm-may-4-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-5.jpg" src="#{baseUrl}images/photos/ffm-may-5-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-6.jpg" src="#{baseUrl}images/photos/ffm-may-6-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-7.jpg" src="#{baseUrl}images/photos/ffm-may-7-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-8.jpg" src="#{baseUrl}images/photos/ffm-may-8-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-9.jpg" src="#{baseUrl}images/photos/ffm-may-9-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-10.jpg" src="#{baseUrl}images/photos/ffm-may-10-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-11.jpg" src="#{baseUrl}images/photos/ffm-may-11-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-12.jpg" src="#{baseUrl}images/photos/ffm-may-12-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-13.jpg" src="#{baseUrl}images/photos/ffm-may-13-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-14.jpg" src="#{baseUrl}images/photos/ffm-may-14-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-15.jpg" src="#{baseUrl}images/photos/ffm-may-15-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-16.jpg" src="#{baseUrl}images/photos/ffm-may-16-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-17.jpg" src="#{baseUrl}images/photos/ffm-may-17-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-18.jpg" src="#{baseUrl}images/photos/ffm-may-18-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-19.jpg" src="#{baseUrl}images/photos/ffm-may-19-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-20.jpg" src="#{baseUrl}images/photos/ffm-may-20-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-21.jpg" src="#{baseUrl}images/photos/ffm-may-21-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-22.jpg" src="#{baseUrl}images/photos/ffm-may-22-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-23.jpg" src="#{baseUrl}images/photos/ffm-may-23-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-24.jpg" src="#{baseUrl}images/photos/ffm-may-24-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-25.jpg" src="#{baseUrl}images/photos/ffm-may-25-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-26.jpg" src="#{baseUrl}images/photos/ffm-may-26-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-27.jpg" src="#{baseUrl}images/photos/ffm-may-27-thumb.jpg" class="b-lazy")
-        div.photo-stream__photo
-            img(data-src="#{baseUrl}images/photos/ffm-may-28.jpg" src="#{baseUrl}images/photos/ffm-may-28-thumb.jpg" class="b-lazy")
+       while i <= 28
+            div.photo-stream__photo
+                img(data-src="#{baseUrl}images/photos/ffm-#{i}.jpg" src="#{baseUrl}images/photos/ffm-#{i++}-thumb.jpg" class="b-lazy")
