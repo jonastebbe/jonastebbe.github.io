@@ -37,6 +37,8 @@
     &__content {
         @extend .pure-u-5-6;
         @extend .pure-u-md-5-6;
+        margin-bottom: 40px;
+        margin-top: 40px;
         p {
             font-family: $font-stack-serif;
             font-size: 35px;

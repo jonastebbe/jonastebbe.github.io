@@ -1,0 +1,27 @@
+extends ../_layouts/base
+
+include ../_modules/header/header
+include ../_modules/footer/footer
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+  - var siteTitle = 'Daily UI Challenge'
+  - var siteDescription = 'Design something for 100 days straight.'
+  - var i = 1
+
+block content
+    div.section
+        div.section__label
+            p About
+            span
+        div.section__content.section__content--centered
+            p
+                | Daily UI Challenge<br />
+                | Design something for 100 days straight.
+            div.more-link.more-link--inline #[a(href="/") back to home]
+
+    div.photo-stream
+       while i <= 10
+            div.photo-stream__photo
+                img(data-src="#{baseUrl}images/dailyui/daily-#{i}.jpg" src="#{baseUrl}images/dailyui/daily-#{i++}-thumb.jpg" class="b-lazy")
