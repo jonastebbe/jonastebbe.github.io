@@ -2975,6 +2975,11 @@ a:active {
   }
 }
 
+.section__content {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
 .section__content p {
   font-family: "Publico", "Georgia", "Times", "Times New Roman", serif;
   font-size: 35px;
