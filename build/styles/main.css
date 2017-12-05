@@ -3343,6 +3343,10 @@ a.text-link--small::before, a.text-link--small::after {
   margin: 0 auto;
 }
 
+.photo-stream__photo h1 {
+  font-family: "Avenir Next", "Helvetica", sans-serif;
+}
+
 .photo-stream__photo img {
   width: 100%;
   margin-bottom: 50px;

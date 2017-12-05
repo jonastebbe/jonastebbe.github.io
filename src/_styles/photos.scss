@@ -214,6 +214,9 @@
     &__photo {
         @extend .pure-u-5-6;
         margin: 0 auto;
+        h1 {
+            font-family: $font-stack-sans;            
+        }
         img {
             width: 100%;
             margin-bottom: 50px;

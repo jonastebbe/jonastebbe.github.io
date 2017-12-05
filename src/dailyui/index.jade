@@ -24,4 +24,5 @@ block content
     div.photo-stream
        while i <= 13
             div.photo-stream__photo.photo-stream__photo--large
+                h1 Daily UI ##{i}
                 img(data-src="#{baseUrl}images/dailyui/daily-#{i}.jpg" src="#{baseUrl}images/dailyui/daily-#{i++}-thumb.jpg" class="b-lazy")
