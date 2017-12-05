@@ -3360,6 +3360,10 @@ a.text-link--small::before, a.text-link--small::after {
   }
 }
 
+.photo-stream__photo--large img {
+  margin-bottom: 150px;
+}
+
 .project-grid {
   margin-top: 150px;
   margin-bottom: 150px;
