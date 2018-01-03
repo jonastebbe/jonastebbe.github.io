@@ -10,6 +10,25 @@ block config
   - var siteDescription = 'Some of my favorite shots.'
 
 block content
+  div.section
+        div.album-grid
+            div.album-grid__header
+                h1 Harz
+                h2 '18
+            div.album-grid__third-teaser
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/harz-7.jpg" src="#{baseUrl}images/photos/harz-7-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/harz-8.jpg" src="#{baseUrl}images/photos/harz-8-thumb.jpg" class="b-lazy")
+                div.album-grid__third-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/harz-28.jpg" src="#{baseUrl}images/photos/harz-28-thumb.jpg" class="b-lazy")
+            div.album-grid__half-teaser
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/harz-6.jpg" src="#{baseUrl}images/photos/harz-6-thumb.jpg" class="b-lazy")
+                div.album-grid__half-teaser__wrapper
+                    img(data-src="#{baseUrl}images/photos/harz-20.jpg" src="#{baseUrl}images/photos/harz-20-thumb.jpg" class="b-lazy")
+            div.more-link #[a(href="/photo/harz") more photos]
+
     div.section
         div.album-grid
             div.album-grid__header
