@@ -14,6 +14,12 @@ $(() => {
 
   // Lazy image loading
   var bLazy = new Blazy({
+    success: function(ele){
+      var img = $(ele);
+      if (img.height() >= img.width()) {
+        $(ele).parent().addClass('photo-stream__photo--portrait');
+      }  
+    }
   });
   bLazy.revalidate();
 
@@ -53,4 +59,13 @@ $(() => {
 
   // AJAX page transitions
   Barba.Pjax.start();
+
+  // Resize portrait photos
+  $('.photo-stream__photo').each((i, obj) => {
+    var img = $(obj).find('img');
+    if (img.height() >= img.width()) {
+      $(obj).addClass('photo-stream__photo--portrait');
+    }
+  });
+
 });
