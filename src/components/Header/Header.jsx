@@ -11,11 +11,6 @@ import Github from "../../images/icons/github.svg";
 
 class Header extends Component {
   render() {
-    const { config } = this.props;
-    const { copyright } = config;
-    if (!copyright) {
-      return null;
-    }
     return (
       <div className="header">
         <div className="header__logo">

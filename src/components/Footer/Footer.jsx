@@ -9,15 +9,10 @@ import GithubGray from "../../images/icons/github-gray.svg";
 
 class Footer extends Component {
   render() {
-    const { config } = this.props;
-    const { copyright } = config;
-    if (!copyright) {
-      return null;
-    }
     return (
       <div className="footer">
         <div className="footer__logo">
-          <h4>Jonas Tebbe</h4>
+          <h4>Copyright © 2018.</h4>
         </div>
         <div className="footer__links">
           <a
