@@ -1,0 +1,235 @@
+.album-grid {
+    @extend .pure-g;
+    width: 100%;
+
+    &__header {
+        @extend .pure-u-1-1;
+        margin-top: 120px;
+        h1 {
+            font-family: $font-stack-sans;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 8px;
+            letter-spacing: normal;
+            display: inline-block;
+        }
+        h2 {
+            color: $gray;
+            font-family: $font-stack-sans;
+            font-weight: 400;
+            font-size: 18px;
+            margin: 0;
+            margin-bottom: 24px;
+            letter-spacing: normal;
+        }
+    }
+    &__big-teaser {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-2-3;
+        &__wrapper {
+            padding-right: 10px;
+            img {
+                width: 100%;
+            }
+            @media screen and (max-width: 35.5em) {
+                padding-right: 0px;
+            }
+        }
+        &__wrapper--inverted {
+            padding-right: 0px;
+            padding-left: 10px;
+            @media screen and (max-width: 35.5em) {
+                padding-left: 0px;
+            }
+        }
+    }
+    &__stacked-teaser {
+        @extend .pure-u-1-1;
+        @extend .pure-u-md-1-3;
+        &__wrapper {
+            padding-left: 10px;
+            img {
+                width: 100%;
+            }
+            &:nth-child(odd) {
+                padding-bottom: 2.5px;
+                @media screen and (max-width: 35.5em) {
+                    padding: 5px 5px 0px 0px;
+                }
+            }
+            &:nth-child(even) {
+                padding-top: 2.5px;
+                @media screen and (max-width: 35.5em) {
+                    padding: 5px 0px 0px 5px;
+                }
+            }
+            @media screen and (max-width: 35.5em) {
+                width: calc((100% - 10px) / 2);
+                float: left;
+            }
+        }
+        &__wrapper--inverted {
+            padding-left: 0px;
+            padding-right: 10px;
+            &:nth-child(odd) {
+                @media screen and (max-width: 35.5em) {
+                    padding: 5px 0px 0px 5px;
+                }
+            }
+            &:nth-child(even) {
+                @media screen and (max-width: 35.5em) {
+                    padding: 5px 5px 0px 0px;
+                }
+            }
+        }
+    }
+    &__half-teaser {
+        @extend .pure-u-1-1;
+        &__wrapper {
+            @extend .pure-u-1-2;
+            img {
+                padding-top: 20px !important;
+                width: calc(100% - 10px) !important;
+            }
+            &:nth-child(odd) {
+                img {
+                    padding-right: 10px !important;
+                    @media screen and (max-width: 35.5em) {
+                        padding-right: 5px !important;
+                    }
+                }
+            }
+            &:nth-child(even) {
+                img {
+                    padding-left: 10px !important;
+                    @media screen and (max-width: 35.5em) {
+                        padding-left: 5px !important;
+                    }
+                }
+            }
+            @media screen and (max-width: 35.5em) {
+                img {
+                    padding-top: 10px !important;
+                    width: calc(100% - 5px) !important;
+                }
+            }
+        }
+    }
+    &__third-teaser {
+        @extend .pure-u-1-1;
+        &__wrapper {
+            @extend .pure-u-1-3;
+            img {
+                padding-top: 20px !important;
+                width: calc(100% - 10px) !important;
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+            @media screen and (max-width: 35.5em) {
+                img {
+                    padding-top: 10px !important;
+                    width: calc(100% - 5px) !important;
+                    padding-left: 2.5px !important;
+                    padding-right: 2.5px !important;
+                }
+            }
+            &:first-of-type {
+                img {
+                    padding-right: 10px !important;
+                    padding-left: 0px !important;
+                    @media screen and (max-width: 35.5em) {
+                        padding-right: 5px !important;
+                    }
+                }
+            }
+            &:last-of-type {
+                img {
+                    padding-left: 10px !important;
+                    padding-right: 0px !important;
+                    @media screen and (max-width: 35.5em) {
+                        padding-left: 5px !important;
+                    }
+                }
+            }
+        }
+    }
+    .more-link {
+        @extend .pure-u-1-1;
+        margin-top: 24px;
+    }
+}
+
+.photo-grid {
+    @extend .pure-g;
+    &__photo {
+        @extend .pure-u-1-2;
+        @extend .pure-u-md-1-2;
+        &__wrapper {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__photo:nth-child(odd) > .photo-grid__photo__wrapper {
+        padding-right: 10px;
+    }
+    &__photo:nth-child(even) > .photo-grid__photo__wrapper {
+        padding-left: 10px;
+    }
+}
+
+.more-link {
+    text-align: center;
+    padding: 25px;
+    a {
+        background-color: $light-gray;
+        font-family: $font-stack-sans;
+        color: $text-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background-color 400ms ease;
+        @media screen and (max-width: 35.5em) {
+            padding: 20px;
+            font-size: 10px;
+            padding: 7.5px 10px;
+            border-width: 2px;
+        }
+        &:hover, &:active, &:focus {
+            background-color: $text-color;
+            color: white;
+            transition: background-color 400ms ease;
+        }
+    }
+}
+
+.photo-stream {
+    @extend .pure-g;
+    &__photo {
+        @extend .pure-u-5-6;
+        margin: 0 auto;
+        margin-bottom: 160px;
+
+        h1 {
+            font-family: $font-stack-sans;
+            font-weight: 500;            
+        }
+    }
+
+    &__photo--portrait {
+        @extend .pure-u-1-2;
+        margin-left: 25%;
+        margin-bottom: 160px;
+
+        @media screen and (max-width: 35.5em) {
+            width: calc(100% * (5/6));
+            margin: 0 auto;
+            margin-bottom: 160px;
+        }
+    }
+}

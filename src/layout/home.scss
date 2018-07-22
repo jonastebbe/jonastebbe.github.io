@@ -1,0 +1,159 @@
+.section {
+    @extend .pure-g;
+    &__label {
+        @extend .pure-u-1-12;
+        @extend .pure-u-md-1-12;
+        position: relative;
+        p {
+            font-family: $font-stack-sans;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            &::before {
+                background-color: $text-color;
+                content: '';
+                display: inline-block;
+                height: 2px;
+                position: relative;
+                vertical-align: middle;
+                width: 50px;
+                margin-right: 10px;
+            }
+            @media screen and (max-width: 35.5em) {
+                font-size: 10px;
+                &::before {
+                    height: 0.15em;
+                    width: 35px;
+                }
+            }
+        }
+    }
+    &__content {
+        @extend .pure-u-5-6;
+        @extend .pure-u-md-5-6;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        p {
+            font-family: $font-stack-serif;
+            font-size: 35px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: normal;
+            padding: 60px;
+            background-color: $primary;
+            @media screen and (max-width: 35.5em) {
+                font-size: 14px;
+                padding: 20px;
+            }
+        }
+        .more-link--inline {
+            background-color: $primary;
+            margin-top: -75px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            @media screen and (max-width: 35.5em) {
+                margin-top: -35px;
+                padding-bottom: 30px;
+            }
+            a { 
+                background-color: $primary-dark;
+            }
+        }
+    }
+    &__content--centered {
+        text-align: center;
+    }
+    &__content--secondary {
+        p {
+            background-color: $primary;
+        }
+    }
+}
+
+a.text-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-style: italic;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $primary-bright;
+        height: 2px;
+    }
+
+    &::before {
+        width: 0%;
+        left: 0;
+        bottom: 0;
+        transition: width ease 0.4s;
+    }
+
+    &::after {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transition: all ease 0.6s;
+    }
+
+    &:hover::before, &:focus::before {
+        width: 100%;
+    }
+
+    &:hover::after, &:focus::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+    }
+
+    @media screen and (max-width: 35.5em) {
+        &::before, &::after {
+            height: 2px;
+        }
+    }
+}
+
+a.text-link--small {
+    &::before, &::after {
+        content: '';
+        height: 2px;
+    }
+}
+
+.music-grid {
+    @extend .pure-g;
+    padding: 50px 0px;
+    &__track {
+        @extend .pure-u-1-2;
+        @extend .pure-u-md-1-4;
+        padding: 10px 0px;
+        &__wrapper {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__track:first-child > .music-grid__track__wrapper {
+        padding-right: 10px;
+    }
+    &__track:not(:first-child):not(:last-child) > .music-grid__track__wrapper {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &__track:last-child > .music-grid__track__wrapper {
+        padding-left: 10px;
+    }
+}

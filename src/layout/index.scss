@@ -1,0 +1,87 @@
+// Fonts
+@import './fonts';
+
+// Variables
+$text-color: black;
+$primary: #FFFDE7;
+$primary-bright: #FFEC24;
+$primary-dark: #F5F3DE;
+
+$gray: #7C7A7A;
+$light-gray: #F2F2F2;
+
+$font-stack-serif: "CLearfaceITC", "Georgia", "Times", "Times New Roman", serif;
+$font-stack-sans: "Avenir Next", "Helvetica", sans-serif;
+
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+
+// Pure CSS
+@import 'node_modules/purecss/build/pure';
+@import 'node_modules/purecss/build/grids-responsive';
+
+// Imports
+@import './footer';
+@import './header';
+@import './about';
+@import './home';
+@import './photos';
+@import './projects';
+
+html, body, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: $font-stack-sans !important;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: calc(100% - 40px);
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1170px;
+  }
+}
+
+.social-icon {
+    font-family: $font-stack-sans !important;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    &:last-of-type {
+        margin-right: 0px;
+    }
+    img {
+        height: 15px;
+        transition: transform 300ms ease;
+        &:hover, &:focus {
+            transform: scale(1.4);
+        }
+    }
+}
