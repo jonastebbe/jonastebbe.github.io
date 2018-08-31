@@ -16,6 +16,34 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Sicily</h1>
+                <h2>2018</h2>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img
+                    sizes={this.props.data.sicily67.childImageSharp.fluid}
+                  />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img
+                    sizes={this.props.data.sicily89.childImageSharp.fluid}
+                  />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img
+                    sizes={this.props.data.sicily101.childImageSharp.fluid}
+                  />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/sicily">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>London</h1>
                 <h2>2018</h2>
               </div>
@@ -1023,6 +1051,27 @@ export const photosQuery = graphql`
       }
     }
     usa1: file(relativePath: { eq: "photos/usa-01.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    sicily67: file(relativePath: { eq: "photos/sicily-067.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    sicily101: file(relativePath: { eq: "photos/sicily-101.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    sicily89: file(relativePath: { eq: "photos/sicily-089.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
