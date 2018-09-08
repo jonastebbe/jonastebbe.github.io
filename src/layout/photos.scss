@@ -232,4 +232,13 @@
             margin-bottom: 160px;
         }
     }
+
+    &__exif {
+        font-family: $font-stack-sans;
+        color: $gray;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 16px;
+    }
 }

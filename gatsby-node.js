@@ -85,36 +85,32 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({ node, name: "slug", value: slug });
     postNodes.push(node);
   } 
-  // else if (node.internal.type === "ImageSharp") {
-  //   const fileNode = getNode(node.parent);
-  //   const parsedFilePath = path.parse(fileNode.absolutePath);
-  //   const absolutePath = `${parsedFilePath.dir}/${parsedFilePath.base}`;
-  //   if (absolutePath.includes('/photos/')) {
-  //     try {
-  //       new ExifImage({ image: absolutePath }, function (error, exifData) {
-  //         if (error) {
-  //           console.error('EXIF Error: ' + error.message);
-  //         } else {
-  //           console.log(exifData);
-  //           const make = exifData.image.Make;
-  //           const model = exifData.image.Model;
-  //           const iso = exifData.exif.ISO;
-  //           const fstop = exifData.exif.FNumber;
-  //           const focalLength = exifData.exif.FocalLength;
-  //           const aperture = exifData.exif.ApertureValue;
+  else if (node.internal.type === "ImageSharp") {
+    const fileNode = getNode(node.parent);
+    const parsedFilePath = path.parse(fileNode.absolutePath);
+    const absolutePath = `${parsedFilePath.dir}/${parsedFilePath.base}`;
+    if (absolutePath.includes('/photos/')) {
+      try {
+        new ExifImage({ image: absolutePath }, function (error, exifData) {
+          if (error) {
+            console.error('EXIF Error: ' + error.message);
+          } else {
+            const exifString = `1/${1 / exifData.exif.ExposureTime}  f/${exifData.exif.FNumber}  ISO${exifData.exif.ISO}  |  ${exifData.exif.FocalLength}mm  |  ${exifData.image.Model}`;
 
-  //           createNodeField({
-  //             node,
-  //             name: "exif",
-  //             value: { make, model, aperture, iso, fstop, focalLength }
-  //           });
-  //         }
-  //       });
-  //     } catch (error) {
-  //       console.error('EXIF Error: ' + error.message);
-  //     }
-  //   };
-  // }
+            console.log(exifString);
+
+            createNodeField({
+              node,
+              name: "exif",
+              value: exifString
+            });
+          }
+        });
+      } catch (error) {
+        console.error('EXIF Error: ' + error.message);
+      }
+    };
+  }
 };
 
 exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {

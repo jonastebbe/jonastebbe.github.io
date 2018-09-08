@@ -39,6 +39,7 @@ class Index extends React.Component {
               return (
                 <div className={photoOrientation}>
                   <Img fluid={img.node.childImageSharp.fluid} />
+                  <div className="photo-stream__exif">{img.node.childImageSharp.fields.exif}</div>
                 </div>
               );
             })}
@@ -63,6 +64,9 @@ export const photosQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1500) {
               ...GatsbyImageSharpFluid
+            }
+            fields {
+              exif
             }
           }
         }
