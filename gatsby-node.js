@@ -1,6 +1,7 @@
 const path = require("path");
 const _ = require("lodash");
 const moment = require("moment");
+const fastExif = require("fast-exif");
 const siteConfig = require("./data/SiteConfig");
 
 const postNodes = [];
@@ -83,6 +84,27 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
     createNodeField({ node, name: "slug", value: slug });
     postNodes.push(node);
+  }
+
+  if (node.internal.type === "ImageSharp" && node.id.includes('src/images/')) {
+    const absolutePath = node.id.split(' ')[0];
+    fastExif.read(absolutePath)
+      .then((exifData) => {
+        const make = get(exifData, ['image', 'Make'], null);
+        const model = get(exifData, ['image', 'Model'], null);
+        const iso = get(exifData, ['exif', 'ISO'], null);
+        const model = get(exifData, ['exif', 'LensModel'], null);
+        const fstop = get(exifData, ['exif', 'FNumber'], null);
+        const focalLength = get(exifData, ['exif', 'FocalLength'], null);
+        const aperture = get(exifData, ['exif', 'ExposureTime'], null);
+
+        createNodeField({
+          node,
+          name: 'exif',
+          value: { make, model, aperture, iso, model, fstop, focalLength }
+        });
+      })
+      .catch((err) => console.error(err));
   }
 };
 
