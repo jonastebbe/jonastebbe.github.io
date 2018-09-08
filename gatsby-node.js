@@ -1,7 +1,7 @@
 const path = require("path");
 const _ = require("lodash");
 const moment = require("moment");
-const fastExif = require("fast-exif");
+const { ExifImage } = require("exif");
 const siteConfig = require("./data/SiteConfig");
 
 const postNodes = [];
@@ -84,28 +84,37 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
     createNodeField({ node, name: "slug", value: slug });
     postNodes.push(node);
-  }
+  } 
+  // else if (node.internal.type === "ImageSharp") {
+  //   const fileNode = getNode(node.parent);
+  //   const parsedFilePath = path.parse(fileNode.absolutePath);
+  //   const absolutePath = `${parsedFilePath.dir}/${parsedFilePath.base}`;
+  //   if (absolutePath.includes('/photos/')) {
+  //     try {
+  //       new ExifImage({ image: absolutePath }, function (error, exifData) {
+  //         if (error) {
+  //           console.error('EXIF Error: ' + error.message);
+  //         } else {
+  //           console.log(exifData);
+  //           const make = exifData.image.Make;
+  //           const model = exifData.image.Model;
+  //           const iso = exifData.exif.ISO;
+  //           const fstop = exifData.exif.FNumber;
+  //           const focalLength = exifData.exif.FocalLength;
+  //           const aperture = exifData.exif.ApertureValue;
 
-  if (node.internal.type === "ImageSharp" && node.id.includes('src/images/')) {
-    const absolutePath = node.id.split(' ')[0];
-    fastExif.read(absolutePath)
-      .then((exifData) => {
-        const make = get(exifData, ['image', 'Make'], null);
-        const model = get(exifData, ['image', 'Model'], null);
-        const iso = get(exifData, ['exif', 'ISO'], null);
-        const model = get(exifData, ['exif', 'LensModel'], null);
-        const fstop = get(exifData, ['exif', 'FNumber'], null);
-        const focalLength = get(exifData, ['exif', 'FocalLength'], null);
-        const aperture = get(exifData, ['exif', 'ExposureTime'], null);
-
-        createNodeField({
-          node,
-          name: 'exif',
-          value: { make, model, aperture, iso, model, fstop, focalLength }
-        });
-      })
-      .catch((err) => console.error(err));
-  }
+  //           createNodeField({
+  //             node,
+  //             name: "exif",
+  //             value: { make, model, aperture, iso, fstop, focalLength }
+  //           });
+  //         }
+  //       });
+  //     } catch (error) {
+  //       console.error('EXIF Error: ' + error.message);
+  //     }
+  //   };
+  // }
 };
 
 exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
