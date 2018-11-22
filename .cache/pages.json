@@ -1,8 +1,8 @@
 [
     {
-        "componentChunkName": "component---node-modules-gatsby-plugin-offline-app-shell-js",
-        "jsonName": "offline-plugin-app-shell-fallback-a30",
-        "path": "/offline-plugin-app-shell-fallback/"
+        "componentChunkName": "component---src-pages-index-jsx",
+        "jsonName": "index",
+        "path": "/"
     },
     {
         "componentChunkName": "component---src-pages-dailyui-jsx",
@@ -10,9 +10,9 @@
         "path": "/dailyui/"
     },
     {
-        "componentChunkName": "component---src-pages-index-jsx",
-        "jsonName": "index",
-        "path": "/"
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
     },
     {
         "componentChunkName": "component---src-pages-photo-jsx",
@@ -38,6 +38,11 @@
         "componentChunkName": "component---src-pages-photo-ffm-18-jsx",
         "jsonName": "photo-ffm-18-8fd",
         "path": "/photo/ffm18/"
+    },
+    {
+        "componentChunkName": "component---src-pages-photo-garmisch-jsx",
+        "jsonName": "photo-garmisch-1af",
+        "path": "/photo/garmisch/"
     },
     {
         "componentChunkName": "component---src-pages-photo-harz-jsx",

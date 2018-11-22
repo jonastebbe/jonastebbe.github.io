@@ -16,19 +16,39 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Garmisch-Partenkirchen</h1>
+                <h2>2018</h2>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.garmisch08.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.garmisch18.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img
+                    sizes={this.props.data.garmisch06.childImageSharp.fluid}
+                  />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/garmisch">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>Sicily</h1>
                 <h2>2018</h2>
               </div>
               <div className="album-grid__third-teaser">
                 <div className="album-grid__third-teaser__wrapper">
-                  <Img
-                    sizes={this.props.data.sicily67.childImageSharp.fluid}
-                  />
+                  <Img sizes={this.props.data.sicily67.childImageSharp.fluid} />
                 </div>
                 <div className="album-grid__third-teaser__wrapper">
-                  <Img
-                    sizes={this.props.data.sicily89.childImageSharp.fluid}
-                  />
+                  <Img sizes={this.props.data.sicily89.childImageSharp.fluid} />
                 </div>
                 <div className="album-grid__third-teaser__wrapper">
                   <Img
@@ -1072,6 +1092,27 @@ export const photosQuery = graphql`
       }
     }
     sicily89: file(relativePath: { eq: "photos/sicily-089.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    garmisch06: file(relativePath: { eq: "photos/garmisch-006.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    garmisch08: file(relativePath: { eq: "photos/garmisch-008.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    garmisch18: file(relativePath: { eq: "photos/garmisch-018.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid

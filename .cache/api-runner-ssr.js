@@ -8,9 +8,6 @@ var plugins = [{
       plugin: require('/Users/jonastebbe/Documents/dev/jonastebbe.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-74499165-1"},
     },{
-      plugin: require('/Users/jonastebbe/Documents/dev/jonastebbe.github.io/node_modules/gatsby-plugin-twitter/gatsby-ssr'),
-      options: {"plugins":[]},
-    },{
       plugin: require('/Users/jonastebbe/Documents/dev/jonastebbe.github.io/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[]},
     },{
@@ -32,7 +29,7 @@ var plugins = [{
 const apis = require(`./api-ssr-docs`)
 
 // Run the specified API in any plugins that have implemented it
-module.exports = (api, args, defaultReturn) => {
+module.exports = (api, args, defaultReturn, argTransform) => {
   if (!apis[api]) {
     console.log(`This API doesn't exist`, api)
   }
@@ -44,6 +41,9 @@ module.exports = (api, args, defaultReturn) => {
       return undefined
     }
     const result = plugin.plugin[api](args, plugin.options)
+    if (result && argTransform) {
+      args = argTransform({ args, result })
+    }
     return result
   })
 
