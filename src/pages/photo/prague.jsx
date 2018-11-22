@@ -39,8 +39,10 @@ class Index extends React.Component {
               return (
                 <div className={photoOrientation}>
                   <Img fluid={img.node.childImageSharp.fluid} />
-                  <div className="photo-stream__exif">{img.node.childImageSharp.fields.exif}</div>
-               </div>
+                  <div className="photo-stream__exif">
+                    {'Olympus OM-D EM-10 II'}
+                  </div>
+                </div>
               );
             })}
           </div>

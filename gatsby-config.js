@@ -40,7 +40,7 @@ module.exports = {
       options: {
         name: "img",
         path: `${__dirname}/src/images/`
-      },
+      }
     },
     {
       resolve: "gatsby-transformer-remark",

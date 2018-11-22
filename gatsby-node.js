@@ -84,20 +84,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
     createNodeField({ node, name: "slug", value: slug });
     postNodes.push(node);
-  } 
-  else if (node.internal.type === "ImageSharp") {
+  } else if (node.internal.type === "ImageSharp") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.absolutePath);
     const absolutePath = `${parsedFilePath.dir}/${parsedFilePath.base}`;
-    if (absolutePath.includes('/photos/')) {
+    if (absolutePath.includes("/photos/")) {
       try {
-        new ExifImage({ image: absolutePath }, function (error, exifData) {
+        new ExifImage({ image: absolutePath }, function(error, exifData) {
           if (error) {
-            console.error('EXIF Error: ' + error.message);
+            console.error("EXIF Error: " + error.message);
           } else {
-            const exifString = `1/${1 / exifData.exif.ExposureTime}  f/${exifData.exif.FNumber}  ISO${exifData.exif.ISO}  |  ${exifData.exif.FocalLength}mm  |  ${exifData.image.Model}`;
-
-            console.log(exifString);
+            const exifString = `1/${1 / exifData.exif.ExposureTime}  f/${
+              exifData.exif.FNumber
+            }  ISO${exifData.exif.ISO}  |  ${exifData.exif.FocalLength}mm  |  ${
+              exifData.image.Model
+            }`;
 
             createNodeField({
               node,
@@ -107,9 +108,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           }
         });
       } catch (error) {
-        console.error('EXIF Error: ' + error.message);
+        console.error("EXIF Error: " + error.message);
       }
-    };
+    }
   }
 };
 

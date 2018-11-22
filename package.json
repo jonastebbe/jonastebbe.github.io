@@ -6,6 +6,7 @@
   "dependencies": {
     "exif": "^0.6.0",
     "gatsby": "next",
+    "gatsby-cli": "^2.4.5",
     "gatsby-image": "^2.0.0-beta.6",
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-google-analytics": "next",
@@ -15,7 +16,7 @@
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "next",
-    "gatsby-plugin-sharp": "^2.0.0-rc.3",
+    "gatsby-plugin-sharp": "^2.0.13",
     "gatsby-plugin-sitemap": "next",
     "gatsby-remark-autolink-headers": "next",
     "gatsby-remark-copy-linked-files": "next",
