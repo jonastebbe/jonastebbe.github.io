@@ -2,7 +2,7 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
-  "component---cache-dev-404-page-js": () => import("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---node-modules-gatsby-plugin-offline-app-shell-js": () => import("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/node_modules/gatsby-plugin-offline/app-shell.js" /* webpackChunkName: "component---node-modules-gatsby-plugin-offline-app-shell-js" */),
   "component---src-pages-dailyui-jsx": () => import("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/dailyui.jsx" /* webpackChunkName: "component---src-pages-dailyui-jsx" */),
   "component---src-pages-index-jsx": () => import("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/index.jsx" /* webpackChunkName: "component---src-pages-index-jsx" */),
   "component---src-pages-photo-jsx": () => import("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo.jsx" /* webpackChunkName: "component---src-pages-photo-jsx" */),
