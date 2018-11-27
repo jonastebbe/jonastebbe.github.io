@@ -19,6 +19,30 @@ class Index extends React.Component {
             <div className="project-grid">
               <div className="project-grid__mockup">
                 <Img
+                  sizes={this.props.data.sherpasDesktop.childImageSharp.fluid}
+                  className="desktop"
+                />
+              </div>
+              <div className="project-grid__meta">
+                <h1>Sherpas</h1>
+                <p>
+                Sherpas is a digital consultancy for corporations and investors. Creating a solution is not tough – creating a good solution is. We understand the challenges you face and lead your digital business from idea to launch and beyond. Our mindset is deeply rooted in the tech startup scene: innovative, collaborative, pragmatic.{" "}
+                  <a
+                    href="//shr.ps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-link text-link--small"
+                  >
+                    More
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="project-grid">
+              <div className="project-grid__mockup">
+                <Img
                   sizes={this.props.data.liqidDesktop.childImageSharp.fluid}
                   className="desktop"
                 />
@@ -93,15 +117,7 @@ class Index extends React.Component {
                   investments for everyone. Students, investors and traders
                   become analysts to predict stock movements and share stock
                   analyses to measure their skills and acquire profound
-                  knowledge fast and easily.{" "}
-                  <a
-                    href="//app.owlhub.co/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-link text-link--small"
-                  >
-                    More
-                  </a>
+                  knowledge fast and easily.
                 </p>
               </div>
             </div>
@@ -129,15 +145,7 @@ class Index extends React.Component {
                   pie. owlhub. is the app that makes investing as hassle-free as
                   your piggy bank. You decide week after week, how much you want
                   to save and we invest your savings into an ETF portfolio that
-                  suits your needs. That way, you make your money work for you.{" "}
-                  <a
-                    href="//www.owlhub.co"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-link text-link--small"
-                  >
-                    More
-                  </a>
+                  suits your needs. That way, you make your money work for you.
                 </p>
               </div>
             </div>
@@ -160,15 +168,7 @@ class Index extends React.Component {
                   of the EBSpreneurship we decided to fix this problem.
                   Marketpulse visualizes the StockPulse data and einriches the
                   information with content from Twitter through the tame API and
-                  financial information from the Finance Base API.{" "}
-                  <a
-                    href="//marketpulse.owlhub.co"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-link text-link--small"
-                  >
-                    More
-                  </a>
+                  financial information from the Finance Base API.
                 </p>
               </div>
             </div>
@@ -184,6 +184,13 @@ export default Index;
 /* eslint no-undef: "off" */
 export const projectsQuery = graphql`
   query ImageQuery {
+    sherpasDesktop: file(relativePath: { eq: "projects/sherpas-desktop.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     liqidDesktop: file(relativePath: { eq: "projects/liqid-desktop.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
