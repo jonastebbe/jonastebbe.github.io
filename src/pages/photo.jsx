@@ -27,9 +27,18 @@ class PhotoPage extends Component {
                   <Img sizes={this.props.data.garmisch18.childImageSharp.fluid} />
                 </div>
                 <div className="album-grid__third-teaser__wrapper">
-                  <Img
-                    sizes={this.props.data.garmisch06.childImageSharp.fluid}
-                  />
+                  <Img sizes={this.props.data.garmisch27.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.garmisch33.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.garmisch42.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.garmisch60.childImageSharp.fluid} />
                 </div>
               </div>
               <div className="more-link">
@@ -1098,7 +1107,7 @@ export const photosQuery = graphql`
         }
       }
     }
-    garmisch06: file(relativePath: { eq: "photos/garmisch-006.jpg" }) {
+    garmisch27: file(relativePath: { eq: "photos/garmisch-027.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
@@ -1113,6 +1122,27 @@ export const photosQuery = graphql`
       }
     }
     garmisch18: file(relativePath: { eq: "photos/garmisch-018.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    garmisch33: file(relativePath: { eq: "photos/garmisch-033.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    garmisch42: file(relativePath: { eq: "photos/garmisch-042.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    garmisch60: file(relativePath: { eq: "photos/garmisch-060.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
