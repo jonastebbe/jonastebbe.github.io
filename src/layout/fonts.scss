@@ -113,34 +113,31 @@
 	font-style: italic;
 }
 
-@font-face {
-	font-family: 'ClearfaceITC';
-	src: url('../fonts/ClearfaceITCPro-Regular.eot');
-	src: url('../fonts/ClearfaceITCPro-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ClearfaceITCPro-Regular.woff') format('woff'),
-		url('../fonts/ClearfaceITCPro-Regular.ttf') format('truetype');
+@font-face{
+	font-family:"Lydian";
+	src:url("../fonts/1314782d-751e-4fa3-aa4d-2352816c770b.eot?#iefix");
+	src:url("../fonts/1314782d-751e-4fa3-aa4d-2352816c770b.eot?#iefix") format("eot"),url("../fonts/58ba5251-4ea2-4005-acce-0570de935576.woff2") format("woff2"),url("../fonts/b9fb84bf-aaea-46e1-812a-379e8106d793.woff") format("woff"),url("../fonts/8be4109d-a6b0-4471-b590-c8e07720140d.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
-
-@font-face {
-	font-family: 'ClearfaceITC';
-	src: url('../fonts/ClearfaceITCPro-Italic.eot');
-	src: url('../fonts/ClearfaceITCPro-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ClearfaceITCPro-Italic.woff') format('woff'),
-		url('../fonts/ClearfaceITCPro-Italic.ttf') format('truetype');
+@font-face{
+	font-family:"Lydian";
+	src:url("../fonts/8768b213-f98b-49e8-ad57-9d01fa5c2c71.eot?#iefix");
+	src:url("../fonts/8768b213-f98b-49e8-ad57-9d01fa5c2c71.eot?#iefix") format("eot"),url("../fonts/6d3dcabb-1c8e-4230-92b8-4094d45b6377.woff2") format("woff2"),url("../fonts/b052bb28-e423-4b79-a213-f22292702739.woff") format("woff"),url("../fonts/fbb947ee-475b-4c7e-ab4c-ac386621e820.ttf") format("truetype");
 	font-weight: 400;
 	font-style: italic;
 }
-
-@font-face {
-	font-family: 'ClearfaceITC';
-	src: url('../fonts/ClearfaceITCPro-Bold.eot');
-	src: url('../fonts/ClearfaceITCPro-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ClearfaceITCPro-Bold.woff') format('woff'),
-		url('../fonts/ClearfaceITCPro-Bold.ttf') format('truetype');
+@font-face{
+	font-family:"Lydian";
+	src:url("../fonts/908800cb-f434-46c6-99a8-35505514f779.eot?#iefix");
+	src:url("../fonts/908800cb-f434-46c6-99a8-35505514f779.eot?#iefix") format("eot"),url("../fonts/dcd84bb5-e0df-427c-b121-d54c23176cca.woff2") format("woff2"),url("../fonts/bb7e5c2e-8e3a-43ed-a698-fcfe2ee7515a.woff") format("woff"),url("../fonts/cd59a9ad-b338-431f-a7ea-b0d131ffbbea.ttf") format("truetype");
 	font-weight: 700;
 	font-style: normal;
 }
-
-
+@font-face{
+	font-family:"Lydian";
+	src:url("../fonts/47e2455c-205b-438b-a418-8b1973942a9a.eot?#iefix");
+	src:url("../fonts/47e2455c-205b-438b-a418-8b1973942a9a.eot?#iefix") format("eot"),url("../fonts/6912b7f0-fd09-4db1-9d95-79a86ffc5c14.woff2") format("woff2"),url("../fonts/e50c0a1d-2482-4ea2-a1f0-5166edb5491a.woff") format("woff"),url("../fonts/00026780-c04e-46d6-8824-3ecd5787a122.ttf") format("truetype");
+	font-weight: 700;
+	font-style: italic;
+}

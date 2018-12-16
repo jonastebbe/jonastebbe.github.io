@@ -62,7 +62,7 @@ class Index extends React.Component {
                 </div>
                 <div className="photo-grid__photo">
                   <div className="photo-grid__photo__wrapper">
-                    <Img sizes={this.props.data.prague.childImageSharp.fluid} />
+                    <Img sizes={this.props.data.sicily.childImageSharp.fluid} />
                   </div>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    prague: file(relativePath: { eq: "photos/prague.jpg" }) {
+    sicily: file(relativePath: { eq: "photos/sicily-090.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid

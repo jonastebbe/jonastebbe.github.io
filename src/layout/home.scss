@@ -8,6 +8,7 @@
             font-family: $font-stack-sans;
             font-size: 14px;
             font-weight: 500;
+            color: $text-color;
             text-transform: uppercase;
             transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
             white-space: nowrap;
@@ -41,6 +42,7 @@
         p {
             font-family: $font-stack-serif;
             font-size: 35px;
+            color: $text-color;
             line-height: 1.5;
             font-weight: 400;
             letter-spacing: normal;
@@ -78,7 +80,7 @@
 a.text-link {
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color: $text-color;
     font-style: italic;
     position: relative;
     text-decoration: none;
