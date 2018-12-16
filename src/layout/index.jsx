@@ -49,6 +49,12 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
+        <div className="box-grid">
+          <div className="box-grid__box box-grid__box--1"></div>
+          <div className="box-grid__box box-grid__box--2"></div>
+          <div className="box-grid__box box-grid__box--3"></div>
+          <div className="box-grid__box box-grid__box--4"></div>
+        </div>
         <div className="wrapper">
           <Header config={config} />
           {children}
