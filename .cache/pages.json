@@ -50,6 +50,11 @@
         "path": "/photo/harz/"
     },
     {
+        "componentChunkName": "component---src-pages-photo-harz-19-jsx",
+        "jsonName": "photo-harz-19-9c5",
+        "path": "/photo/harz19/"
+    },
+    {
         "componentChunkName": "component---src-pages-photo-london-jsx",
         "jsonName": "photo-london-590",
         "path": "/photo/london/"

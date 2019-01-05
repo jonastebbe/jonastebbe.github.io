@@ -13,6 +13,7 @@ exports.components = {
   "component---src-pages-photo-ffm-18-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/ffm18.jsx")),
   "component---src-pages-photo-garmisch-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/garmisch.jsx")),
   "component---src-pages-photo-harz-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/harz.jsx")),
+  "component---src-pages-photo-harz-19-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/harz19.jsx")),
   "component---src-pages-photo-london-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/london.jsx")),
   "component---src-pages-photo-prague-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/prague.jsx")),
   "component---src-pages-photo-rheingau-jsx": preferDefault(require("/Users/jonastebbe/Documents/dev/jonastebbe.github.io/src/pages/photo/rheingau.jsx")),
