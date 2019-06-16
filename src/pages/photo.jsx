@@ -16,6 +16,69 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Denmark</h1>
+                <h2>2019</h2>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.denmark4.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.denmark32.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.denmark39.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.denmark63.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.denmark69.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.denmark86.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/denmark">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
+                <h1>Elbsandsteingebirge</h1>
+                <h2>2019</h2>
+              </div>
+              <div className="album-grid__half-teaser">
+                <div className="album-grid__half-teaser__wrapper">
+                  <Img sizes={this.props.data.elbsandstein006.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__half-teaser__wrapper">
+                  <Img sizes={this.props.data.elbsandstein004.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.elbsandstein016.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.elbsandstein001.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.elbsandstein021.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/elbsandstein">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>Harz</h1>
                 <h2>2019</h2>
               </div>
@@ -1186,6 +1249,83 @@ export const photosQuery = graphql`
       }
     }
     garmisch60: file(relativePath: { eq: "photos/garmisch-060.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    elbsandstein001: file(relativePath: { eq: "photos/elbsandstein-001.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    elbsandstein004: file(relativePath: { eq: "photos/elbsandstein-004.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    elbsandstein006: file(relativePath: { eq: "photos/elbsandstein-006.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    elbsandstein016: file(relativePath: { eq: "photos/elbsandstein-016.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    elbsandstein021: file(relativePath: { eq: "photos/elbsandstein-021.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    denmark4: file(relativePath: { eq: "photos/denmark-00004.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    denmark32: file(relativePath: { eq: "photos/denmark-00032.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    denmark39: file(relativePath: { eq: "photos/denmark-00039.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    denmark63: file(relativePath: { eq: "photos/denmark-00063.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    denmark69: file(relativePath: { eq: "photos/denmark-00069.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    denmark86: file(relativePath: { eq: "photos/denmark-00086.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
