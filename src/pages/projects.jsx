@@ -24,9 +24,9 @@ class Index extends React.Component {
                 />
               </div>
               <div className="project-grid__meta">
-                <h1>Sherpas</h1>
+                <h1>SHRPS</h1>
                 <p>
-                Sherpas is a digital consultancy for corporations and investors. Creating a solution is not tough – creating a good solution is. We understand the challenges you face and lead your digital business from idea to launch and beyond. Our mindset is deeply rooted in the tech startup scene: innovative, collaborative, pragmatic.{" "}
+                SHRPS is a digital consultancy for corporations and investors. Creating a solution is not tough – creating a good solution is. We understand the challenges you face and lead your digital business from idea to launch and beyond. Our mindset is deeply rooted in the tech startup scene: innovative, collaborative, pragmatic.{" "}
                   <a
                     href="//shr.ps"
                     target="_blank"
