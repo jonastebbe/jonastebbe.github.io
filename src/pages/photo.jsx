@@ -16,6 +16,28 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Dresden</h1>
+                <h2>2019</h2>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.dresden1.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.dresden2.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.dresden3.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/dresden">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>Denmark</h1>
                 <h2>2019</h2>
               </div>
@@ -1326,6 +1348,27 @@ export const photosQuery = graphql`
       }
     }
     denmark86: file(relativePath: { eq: "photos/denmark-00086.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dresden1: file(relativePath: { eq: "photos/dresden-00009.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dresden2: file(relativePath: { eq: "photos/dresden-00017.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dresden3: file(relativePath: { eq: "photos/dresden-00023.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
