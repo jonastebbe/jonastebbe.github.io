@@ -4,3 +4,4 @@ public
 tmp
 .grunt
 .DS_Store
+.cache
