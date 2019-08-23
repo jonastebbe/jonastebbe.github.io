@@ -222,8 +222,8 @@
     }
 
     &__photo--portrait {
-        @extend .pure-u-1-2;
-        margin-left: 25%;
+        @extend .pure-u-2-5;
+        margin-left: 30%;
         margin-bottom: 160px;
 
         @media screen and (max-width: 35.5em) {
