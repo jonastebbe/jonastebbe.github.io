@@ -16,6 +16,28 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Berchtesgaden</h1>
+                <h2>2019</h2>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.berchtesgaden1.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.berchtesgaden2.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.berchtesgaden3.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/berchtesgaden">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>Dresden</h1>
                 <h2>2019</h2>
               </div>
@@ -1369,6 +1391,27 @@ export const photosQuery = graphql`
       }
     }
     dresden3: file(relativePath: { eq: "photos/dresden-00023.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    berchtesgaden1: file(relativePath: { eq: "photos/berchtesgaden-00004.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    berchtesgaden2: file(relativePath: { eq: "photos/berchtesgaden-00017.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    berchtesgaden3: file(relativePath: { eq: "photos/berchtesgaden-00026.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
