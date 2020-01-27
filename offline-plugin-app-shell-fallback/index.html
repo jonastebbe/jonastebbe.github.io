@@ -1,8 +1,14 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.3.25"/><title data-react-helmet="true"></title><style type="text/css">
-    .anchor {
-      float: left;
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.19.6"/><title data-react-helmet="true"></title><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
       padding-right: 4px;
-      margin-left: -20px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
     }
     h1 .anchor svg,
     h2 .anchor svg,
@@ -32,7 +38,9 @@
       if (hash !== '') {
         var element = document.getElementById(hash)
         if (element) {
-          var offset = element.offsetTop
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          let clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
           // Wait for the browser to finish rendering before scrolling.
           setTimeout((function() {
             window.scrollTo(0, offset - 0)
@@ -40,7 +48,7 @@
         }
       }
     })
-  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.json"/><meta name="theme-color" content="#FFFDE7"/><link as="script" rel="preload" href="/component---node-modules-gatsby-plugin-offline-app-shell-js-8d4e92c92ca9d6f5a675.js"/><link as="script" rel="preload" href="/app-67e1ed7cc1bdea660161.js"/><link as="script" rel="preload" href="/webpack-runtime-b5699ab82a0200e0b791.js"/><link as="fetch" rel="preload" href="/static/d/604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"></div></div><script>
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#FFFDE7"/><link rel="apple-touch-icon" sizes="192x192" href="/logos/logo-192x192.png"/><link rel="apple-touch-icon" sizes="512x512" href="/logos/logo-512x512.png"/><noscript><meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&amp;redirect=true"/></noscript><link as="script" rel="preload" href="/webpack-runtime-cb73abb6dd99fe991166.js"/><link as="script" rel="preload" href="/commons-25f75203516e1d4ab6a1.js"/><link as="script" rel="preload" href="/app-c94b335e1711bb6ddbaa.js"/><link as="script" rel="preload" href="/component---node-modules-gatsby-plugin-offline-app-shell-js-cf2fd0f92da7499f18b1.js"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"></div></div><script>
   
   
   if(true) {
@@ -54,5 +62,6 @@
       
       
       
-      }
-      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---node-modules-gatsby-plugin-offline-app-shell-js","jsonName":"offline-plugin-app-shell-fallback-a30","path":"/offline-plugin-app-shell-fallback/"};window.dataPath="604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-67e1ed7cc1bdea660161.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-8d4e92c92ca9d6f5a675.js"],"component---src-pages-dailyui-jsx":["/component---src-pages-dailyui-jsx-5bffe145bc4a5e26a235.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-c44fd09b39fbe1729ad5.js"],"component---src-pages-photo-jsx":["/component---src-pages-photo-jsx-5b9659de93d3a1863adf.js"],"component---src-pages-photo-bavaria-jsx":["/component---src-pages-photo-bavaria-jsx-eb993626cda532c82170.js"],"component---src-pages-photo-berchtesgaden-jsx":["/component---src-pages-photo-berchtesgaden-jsx-e381152f847e6c2c5bb2.js"],"component---src-pages-photo-denmark-jsx":["/component---src-pages-photo-denmark-jsx-9f14387f0e1c82fac618.js"],"component---src-pages-photo-dresden-jsx":["/component---src-pages-photo-dresden-jsx-3a7895b7d7f473af8019.js"],"component---src-pages-photo-dubrovnik-jsx":["/component---src-pages-photo-dubrovnik-jsx-4ac1558a5b6e4ec9f110.js"],"component---src-pages-photo-elbsandstein-jsx":["/component---src-pages-photo-elbsandstein-jsx-0e0420e27952a554faa9.js"],"component---src-pages-photo-ffm-jsx":["/component---src-pages-photo-ffm-jsx-c3d1874c12f76b7b4928.js"],"component---src-pages-photo-ffm-18-jsx":["/component---src-pages-photo-ffm-18-jsx-96848a5d04e6a393447e.js"],"component---src-pages-photo-garmisch-jsx":["/component---src-pages-photo-garmisch-jsx-ee22bb13f078b57cb08c.js"],"component---src-pages-photo-harz-jsx":["/component---src-pages-photo-harz-jsx-80c3f96e6c5fb3cd7a3f.js"],"component---src-pages-photo-harz-19-jsx":["/component---src-pages-photo-harz-19-jsx-a22ac4a8271b50500747.js"],"component---src-pages-photo-london-jsx":["/component---src-pages-photo-london-jsx-7cc2490085e2abf86ab9.js"],"component---src-pages-photo-prague-jsx":["/component---src-pages-photo-prague-jsx-b24f9b7ec099c5ccd1e4.js"],"component---src-pages-photo-rheingau-jsx":["/component---src-pages-photo-rheingau-jsx-48d6ceccd21a24b985a6.js"],"component---src-pages-photo-sicily-jsx":["/component---src-pages-photo-sicily-jsx-d895916fe7b8adfa9f61.js"],"component---src-pages-projects-jsx":["/component---src-pages-projects-jsx-d16ecc07dda5b865ef33.js"],"pages-manifest":["/pages-manifest-61ac4cd612e8065d23e1.js"]};/*]]>*/</script><script src="/webpack-runtime-b5699ab82a0200e0b791.js" async=""></script><script src="/app-67e1ed7cc1bdea660161.js" async=""></script><script src="/component---node-modules-gatsby-plugin-offline-app-shell-js-8d4e92c92ca9d6f5a675.js" async=""></script></body></html>
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/offline-plugin-app-shell-fallback/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c94b335e1711bb6ddbaa.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-cf2fd0f92da7499f18b1.js"],"component---src-pages-dailyui-jsx":["/component---src-pages-dailyui-jsx-7d21dff14a2573aa3d94.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-a2a7b6ade884d8e31c44.js"],"component---src-pages-photo-jsx":["/component---src-pages-photo-jsx-8c77281a75dee1e3c058.js"],"component---src-pages-photo-bavaria-jsx":["/component---src-pages-photo-bavaria-jsx-2e8fc10a4280b7f11a6c.js"],"component---src-pages-photo-berchtesgaden-jsx":["/component---src-pages-photo-berchtesgaden-jsx-7f84222a0a4b19e96b06.js"],"component---src-pages-photo-denmark-jsx":["/component---src-pages-photo-denmark-jsx-44510ebbdb59e2b2dc9e.js"],"component---src-pages-photo-dresden-jsx":["/component---src-pages-photo-dresden-jsx-08618187ad2da8c7dd65.js"],"component---src-pages-photo-dubrovnik-jsx":["/component---src-pages-photo-dubrovnik-jsx-9e88134d16589c9361df.js"],"component---src-pages-photo-elbsandstein-jsx":["/component---src-pages-photo-elbsandstein-jsx-a875ac4244390cd020e5.js"],"component---src-pages-photo-ffm-jsx":["/component---src-pages-photo-ffm-jsx-d9aceca7300b05834a79.js"],"component---src-pages-photo-ffm-18-jsx":["/component---src-pages-photo-ffm-18-jsx-8e362dbabefb876a8739.js"],"component---src-pages-photo-garmisch-jsx":["/component---src-pages-photo-garmisch-jsx-e06689e88dff789b8beb.js"],"component---src-pages-photo-harz-jsx":["/component---src-pages-photo-harz-jsx-c35cb34105af071ae6c5.js"],"component---src-pages-photo-harz-19-jsx":["/component---src-pages-photo-harz-19-jsx-ba4f2baa495ab1ae0312.js"],"component---src-pages-photo-london-jsx":["/component---src-pages-photo-london-jsx-594a00ae24ec9b4bcb05.js"],"component---src-pages-photo-prague-jsx":["/component---src-pages-photo-prague-jsx-d970c0b5096cb441aac9.js"],"component---src-pages-photo-rheingau-jsx":["/component---src-pages-photo-rheingau-jsx-e6abcb168afc4f68f9e5.js"],"component---src-pages-photo-sicily-jsx":["/component---src-pages-photo-sicily-jsx-04726a881f6c291e4457.js"],"component---src-pages-photo-wieda-jsx":["/component---src-pages-photo-wieda-jsx-abf11a9c0e3691f1efab.js"],"component---src-pages-projects-jsx":["/component---src-pages-projects-jsx-490ff4ec8fdd464c7e5a.js"]};/*]]>*/</script><script src="/component---node-modules-gatsby-plugin-offline-app-shell-js-cf2fd0f92da7499f18b1.js" async=""></script><script src="/app-c94b335e1711bb6ddbaa.js" async=""></script><script src="/commons-25f75203516e1d4ab6a1.js" async=""></script><script src="/webpack-runtime-cb73abb6dd99fe991166.js" async=""></script></body></html>
