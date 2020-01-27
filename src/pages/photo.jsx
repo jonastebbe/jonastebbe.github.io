@@ -16,6 +16,25 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Wieda</h1>
+                <h2>2019</h2>
+              </div>
+              <div className="album-grid__half-teaser">
+                <div className="album-grid__half-teaser__wrapper">
+                  <Img sizes={this.props.data.wieda12.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__half-teaser__wrapper">
+                  <Img sizes={this.props.data.wieda21.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/wieda">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>Berchtesgaden</h1>
                 <h2>2019</h2>
               </div>
@@ -1412,6 +1431,20 @@ export const photosQuery = graphql`
       }
     }
     berchtesgaden3: file(relativePath: { eq: "photos/berchtesgaden-00026.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    wieda12: file(relativePath: { eq: "photos/wieda-00012.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    wieda21: file(relativePath: { eq: "photos/wieda-00021.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
