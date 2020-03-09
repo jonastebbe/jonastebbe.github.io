@@ -13,7 +13,7 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div className="index-container">
-          <Helmet title={`${config.siteTitle} | Harz 2019`} />
+          <Helmet title={`${config.siteTitle} | Harz 2020`} />
           <SEO />
           <div className="section">
             <div className="section__label">
@@ -23,7 +23,7 @@ class Index extends React.Component {
             <div className="section__content section__content--centered">
               <p>
                 Harz, Germany<br />
-                <i>January 2019</i>
+                <i>March 2020</i>
               </p>
               <div className="more-link more-link--inline">
                 <a href="/photo">Back to albums</a>
@@ -53,9 +53,9 @@ export default Index;
 
 /* eslint no-undef: "off" */
 export const photosQuery = graphql`
-  query Harz19Query {
+  query Harz20Query {
     allFile(
-      filter: { relativePath: { regex: "/harz19-/" } }
+      filter: { relativePath: { regex: "/harz20-/" } }
       sort: { order: ASC, fields: [name] }
     ) {
       edges {

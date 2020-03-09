@@ -16,6 +16,28 @@ class PhotoPage extends Component {
           <div className="section">
             <div className="album-grid">
               <div className="album-grid__header">
+                <h1>Harz</h1>
+                <h2>2020</h2>
+              </div>
+              <div className="album-grid__third-teaser">
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.harz2001.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.harz2002.childImageSharp.fluid} />
+                </div>
+                <div className="album-grid__third-teaser__wrapper">
+                  <Img sizes={this.props.data.harz2003.childImageSharp.fluid} />
+                </div>
+              </div>
+              <div className="more-link">
+                <Link to="/photo/harz20">more photos</Link>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="album-grid">
+              <div className="album-grid__header">
                 <h1>Wieda</h1>
                 <h2>2019</h2>
               </div>
@@ -1445,6 +1467,27 @@ export const photosQuery = graphql`
       }
     }
     wieda21: file(relativePath: { eq: "photos/wieda-00021.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    harz2001: file(relativePath: { eq: "photos/harz20-04.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    harz2002: file(relativePath: { eq: "photos/harz20-09.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    harz2003: file(relativePath: { eq: "photos/harz20-17.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid

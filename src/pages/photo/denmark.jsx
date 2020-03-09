@@ -36,9 +36,11 @@ class Index extends React.Component {
                 img.node.childImageSharp.fluid.aspectRatio > 1
                   ? "photo-stream__photo"
                   : "photo-stream__photo--portrait";
+              console.log(img.node.childImageSharp);
               return (
                 <div className={photoOrientation}>
                   <Img fluid={img.node.childImageSharp.fluid} />
+                  <span>1/800 · ƒ/5.6 · mm · Sony A7</span>
                 </div>
               );
             })}
@@ -64,6 +66,22 @@ export const photosQuery = graphql`
             fluid(maxWidth: 1500) {
               ...GatsbyImageSharpFluid
             }
+            fields {
+              exif {
+                raw {
+                  exif {
+                    ISO
+                    ApertureValue
+                    FocalLength
+                    ExposureTime
+                  }
+                  image {
+                    Model
+                    Make
+                  }
+                }
+              }
+            } 
           }
         }
       }
