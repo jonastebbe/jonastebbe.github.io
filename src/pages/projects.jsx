@@ -19,16 +19,16 @@ class Index extends React.Component {
             <div className="project-grid">
               <div className="project-grid__mockup">
                 <Img
-                  sizes={this.props.data.sherpasDesktop.childImageSharp.fluid}
+                  sizes={this.props.data.anddoDesktop.childImageSharp.fluid}
                   className="desktop"
                 />
               </div>
               <div className="project-grid__meta">
-                <h1>SHRPS</h1>
+                <h1>&do</h1>
                 <p>
-                SHRPS is a digital consultancy for corporations and investors. Creating a solution is not tough – creating a good solution is. We understand the challenges you face and lead your digital business from idea to launch and beyond. Our mindset is deeply rooted in the tech startup scene: innovative, collaborative, pragmatic.{" "}
+                &do is a consulting firm specializing in digital value creation. Being rooted in the tech startup scene, we are particularly skilled in transforming ideas into results and technological change into business value. Our clients include both corporations and private equity investors.{" "}
                   <a
-                    href="//shr.ps"
+                    href="//and.do"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-link text-link--small"
@@ -184,7 +184,14 @@ export default Index;
 /* eslint no-undef: "off" */
 export const projectsQuery = graphql`
   query ImageQuery {
-    sherpasDesktop: file(relativePath: { eq: "projects/sherpas-desktop.jpg" }) {
+    anddoDesktop: file(relativePath: { eq: "projects/anddo-desktop.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    anddoMobile: file(relativePath: { eq: "projects/anddo-mobile.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid

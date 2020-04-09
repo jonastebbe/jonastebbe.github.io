@@ -70,7 +70,13 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        stripMetadata: false
+      }
+    },
+    "gatsby-plugin-sharp-exif",
     {
       resolve: "gatsby-plugin-manifest",
       options: {

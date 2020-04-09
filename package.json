@@ -15,6 +15,7 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "next",
     "gatsby-plugin-sharp": "^2.0.0-beta.6",
+    "gatsby-plugin-sharp-exif": "^1.0.1",
     "gatsby-plugin-sitemap": "next",
     "gatsby-remark-autolink-headers": "next",
     "gatsby-remark-copy-linked-files": "next",
